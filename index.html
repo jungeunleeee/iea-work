@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>장애아가족 양육지원 서비스 관련 시스템</title>
+  <link rel="stylesheet" href="css/style-pc.css" />
+  <link rel="stylesheet" href="css/web-font.css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <a href="#main" id="skip-nav">본문 바로가기</a>
+
+    <header id="header">
+
+    </header>
+
+    <main id="main">
+      <div class="content-box">
+        <div class="service-box">
+          <h1>장애아가족 양육지원 서비스<br />관리 시스템</h1>
+          <div class="inner-box">
+            <div class="selectAccount-box">
+              <p class="title">계정선택</p>
+              <form>
+                <label class="container" for="user">
+                  <input type="radio" checked="checked" name="user-account" id="user" />
+                  <span class="checkmark"></span>
+                  이용자
+                </label>
+
+                <label class="container"  for="sitter">
+                  <input type="radio" id="sitter" name="user-account" />
+                  <span class="checkmark"></span>
+                  돌보미
+                </label>
+
+                <label class="container" for="enterp">
+                  <input type="radio" id="enterp" name="user-account" />
+                  <span class="checkmark"></span>
+                  시행기관
+                </label>
+
+                <label class="container">
+                  <input type="radio" name="user-account" />
+                  <span class="checkmark"></span>
+                  지원기관
+                </label>
+              </form>
+            </div>
+
+            <fieldset>
+              <p><label for="nameId">아이디</label></p>
+              <input type="text" id="nameId" name="name" />
+            </fieldset>
+            <fieldset>
+              <p><label for="namePw">비밀번호</label></p>
+              <input type="text" id="namePw" name="name" />
+            </fieldset>
+
+            <ul class="login-list">
+              <li>
+                <label class="container" for="login-status">
+                  <input type="checkbox" id="login-status" />
+                  <span class="checkmark"></span>
+                  <p>로그인 상태 유지</p>
+                </label>
+              </li>
+
+              <li>
+                <a href="#">아이디/비밀번호 찾기</a>
+              </li>
+            </ul>
+            <button type="submit" id="login">로그인</button>
+          </div>
+        </div>
+      </div>
+      <div class="layer-popup pop1">
+        <a href="#">
+          <div class="layer-box">
+            <a href="close-btn">닫기</a>
+            <h2>아이디/비밀번호</h2>
+            <div class="inner-box">
+              <p>아이디 또는 비밀번호가<br /> 일치하지 않습니다.</p>
+              <button type="button">확인</button>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="layer-popup pop2">
+        <a href="#">
+          <div class="layer-box">
+            <a href="close-btn">닫기</a>
+            <h2>아이디/비밀번호</h2>
+            <div class="inner-box">
+              <p>사용된 계정입니다.<br />
+                소속기관에 문의 하십시오.</p>
+              <button type="button">확인</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>
