@@ -1,14 +1,34 @@
 @import url('../css/reset.css');
 
+/* common */
+body {font-family:'NotoSansCJKkr', 'NotoSansKR'; font-size: 14px; color: #292929; box-sizing: border-box;  position: relative; width: 100%; height: 100vh;}
+
+#wrapper {min-width: 1024px; overflow: hidden; position: relative; margin: 0 auto; height: 100%;}
+
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0,0,0,0.8); color : #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;} 
+#skip-nav:focus {top: 0;}
+
 
 
 #header {width: 100%;height: 68px; position: fixed; left: 0; top: 0; border-bottom: 1px solid #dbdbdb;}
 
-#main {position: relative; width: 100%; height: 100%; box-sizing: border-box;}
-#main > div.content-box {width: 620px; height: 788px; border-radius: 8px; box-sizing: border-box; background-color: #fff;  border: 1px solid #dbdbdb; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50% );}
+/* common */
+fieldset {padding: 0; border: none;}
+fieldset + fieldset {margin-top: 24px;}
+fieldset > p {margin-bottom: 8px; color: #292929; font-weight: 400; text-align-last: left;} 
+fieldset > input {width: 100%; height: 48px; box-sizing: border-box; border-radius: 3px; border: 1px solid #dedede;} 
 
+
+#main {width: 100%; height: 100%; box-sizing: border-box; padding-top: 68px;}
+#main div.content-box {height: 100%; display: flex; justify-content: center; align-items: center;}
+#main button.btn {width: 380px; height: 48px; box-sizing: border-box; background-color: #9579ad; border-radius: 6px; border: transparent; font-size: 18px; color: #fff; font-weight: 600;}
+#main button:focus {outline: none;}
+
+
+/* service-box */
+#main  div.service-box{width: 620px; height: 788px; border-radius: 8px; box-sizing: border-box; background-color: #fff;  border: 1px solid #dbdbdb; }
 #main > div.content-box > div.service-box > h1 {text-align: center; margin-top: 59px; font-size: 24px; font-weight: 600;}
-#main > div.content-box > div.service-box > div.inner-box {width: 380px; height: 419px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#main > div.content-box > div.service-box > div.inner-box {width: 380px; height: 419px; margin: 68px auto 0;}
 
 #main div.selectAccount-box {}
 #main div.selectAccount-box > p.title {padding-bottom: 7px; border-bottom: 1px solid #dbdbdb; font-weight: 500; }
@@ -23,34 +43,104 @@ position: absolute; top: 4px; left: 0; height: 16px; width: 16px; border-radius:
 #main div.selectAccount-box > form > label input:focus ~ .checkmark {border: 4px solid #9579AD; border-radius: 9px;}
 
 
-#main fieldset {padding: 0; border: none;}
-#main fieldset + fieldset {margin-top: 24px;}
-#main fieldset > p {margin-bottom: 8px; color: #292929; font-weight: light;} 
-#main fieldset > input {width: 100%; height: 48px; box-sizing: border-box; border-radius: 3px; border: 1px solid #dedede;} 
 
 
 #main ul.login-list {display: flex; justify-content: space-between; margin: 16px 0 48px;}
 #main ul.login-list > li {font-size: 13px; font-weight: 300; color: #2C3238; display: flex;}
 #main ul.login-list > li > label {position: relative; padding-left:29px;}
-#main ul.login-list > li > label > p {}
-#main ul.login-list > li > label > input {position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;}
-#main ul.login-list > li > label > span.checkmark {
-position: absolute; top: -1px; left: -1px; height: 22px; width: 22px; border-radius: 3px; background-color: #9579AD; box-sizing: border-box;}
-#main ul.login-list > li > label > span.checkmark::after {content:''; position: absolute; left: 20%; right: 20%; top: 27.5%; bottom: 30%; border: 2px solid #FFFFFF;}
-#main ul.login-list > li > label > span.checkmark::before {}
-#main ul.login-list > li > label input:checked ~ .checkmark,
-#main ul.login-list > li > label input:focus ~ .checkmark {border: 4px solid #9579AD; border-radius: 9px;}
+#main ul.login-list > li > label > input {
+    /* position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; */
+    display: none;
+}
+
+/* 체크박스의 기본 상태 */
+#main ul.login-list > li > label span.checkmark {
+position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 18px; width: 18px; background-color: #fff; border: 1px solid #D9D9D9; display: block;}
+
+/* 체크박스의 기본 상태일때 svg(체크) */
+#main ul.login-list > li > label input:checked  ~ .checkmark::after {content:''; width: 12px; height: 6px; display: block; position: absolute; left: 50%; top: 5px; transform: translateX(-50%) rotate(-45deg); border-bottom: 2px solid #fff; border-left: 2px solid #fff; box-sizing: border-box;}
+/* #main ul.login-list > li > label  .checkmark > svg {display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);} */
+#main ul.login-list > li > label input:checked ~ .checkmark > svg { display: block;}
+
+/* 체크박스가 체크 되었을 때 */
+#main ul.login-list > li > label input:checked ~ .checkmark { box-sizing: border-box; border-radius: 3px; width: 22px; height: 22px; border: none; background-color: #9579AD;}
 
 #main ul.login-list > li:last-child {font-size: 14px; color: #424242;}
 
+#main div.button-area {margin-top: 20px;}
+#main div.button-area > button {border: none; background-color: transparent; font-weight: 500; display: block; }
+#main div.button-area > button +button {margin-top: 15px;}
 
-#main button#login {width: 380px; height: 48px; box-sizing: border-box; background-color: #9579ad; border-radius: 6px; border: transparent; font-size: 18px; color: #fff; font-weight: 700;}
-#main button:focus {outline: none;}
+
+
 
 /* layer-popup */
-div.layer-popup {position: absolute; top: 308px; right: 80px; width: 404px; height: 204px; box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15); background-color: #fff; border-radius: 3px; box-sizing: border-box; padding: 16px;}
+div.layer-popup {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 404px; height: 204px; box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15); background-color: #fff; border-radius: 3px; box-sizing: border-box; padding: 16px; display: none;}
+div.layer-popup.on {display: block;}
+
+
+div.layer-popup a.close-btn {position: absolute; right: 16px; top: 16px; display: block; font-size: 0; width: 14px; height: 14px;}
+div.layer-popup a.close-btn::after,
+div.layer-popup a.close-btn::before {display: block; content:''; position: absolute; width: 1px; height: 15px; background-color: #6B7682;; transform: rotate(45deg) translateX(-50%);  left:50%;}
+div.layer-popup a.close-btn::before {transform: rotate(-45deg) translateX(-50%);  left:50%;}
 div.layer-popup  div.inner-box {text-align: center;}
 div.layer-popup h2 {font-size: 16px; font-weight: 600; margin-bottom: 33px;}
 div.layer-popup p {font-weight: 400; margin-bottom: 36px;}
 div.layer-popup button {padding: 9px 12px; font-size: 12px; font-weight: 700; width: 144px;height: 38px; background-color: #9579AD; border-radius: 3px; border: none; color: #fff}
-div.layer-popup.pop2 {top: 570px;}
+
+
+/* body sub */
+body.sub #main > div.content-box  {display: block;}
+body.sub #main > div.content-box > div.system-box {text-align: center; width: 380px; height: 100%; margin: 5% auto;   }
+body.sub #main > div.content-box > div.system-box > h1 {font-size: 24px; font-weight: 600;}
+body.sub #main > div.content-box  ul {display: flex; justify-content: center;  margin-top: 66px;}
+body.sub #main > div.content-box  ul > li{background-color: #DBDBDB;color: #fff; width: 190px; height: 48px; box-sizing: border-box ;}
+body.sub #main > div.content-box  ul > li:first-child{border-radius: 6px 0px 0px 6px;}
+body.sub #main > div.content-box  ul > li:last-child {border-radius: 0px 6px 6px 0px;
+}
+body.sub #main > div.content-box  ul > li.on{background-color:#9579AD;}
+body.sub #main > div.content-box  ul > li > a {display: block; width: 100%; height: 100%; line-height: 48px;}
+body.sub #main #tabcontent1 > p {margin-top: 114px; font-size: 18px; color: #757575; font-weight: 600;}
+
+body.sub #main div.tab-contents {position: relative;}
+body.sub #main div.tab-contents > div.tab{position: absolute; left: 0; top: 0; width: 100%; display: none;}
+body.sub #main div.tab-contents > div.tab.on {display: block;}
+body.sub #main div.tab-contents #tabcontent2{padding-top: 68px;}
+body.sub #main div.tab-contents #tabcontent2 > button {margin-top: 52px;}
+
+/* body admin */
+body.admin > div#wrapper {background-color: skyblue;}
+body.admin > div#wrapper > #main {padding-left: 302px; box-sizing: border-box;}
+body.admin > div#wrapper > #main > .sec {width: 1180px;}
+body.admin > div#wrapper > #main > #section1 {margin-top: 28px; background-color: yellow; }
+body.admin > div#wrapper > #main > #section1 > div.content-box {display: block; padding: 36px 0 0 45px; box-sizing: border-box; }
+
+body.admin > div#wrapper > #main > #section1 > h2 {display: inline-block;}
+#section1 div.selectBox-wrap {display: flex;}
+#section1 ul.select-list {display: flex;}
+#section1 ul.select-list > li {font-weight: 600;}
+#section1 ul.select-list > li + li {margin-left: 24px;}
+#section1 ul.select-list > li > span.title {margin-right: 16px;}
+#section1 ul.select-list > li > select {width: 108px; height: 38px; border-radius: 8px; box-sizing: border-box; font-family: inherit; }
+
+#section1 ul.select-list > li:nth-child(4) >  span {margin: 0 16px;} 
+
+#section1 div.checkBox-wrap {display: flex; width: 973px;} 
+
+
+
+
+
+
+
+#section1 div.checkBox-wrap > div.box {padding: 13px 0 0 16px; min-width: 112px;}
+#section1 div.checkBox-wrap > div.box > strong {}
+#section1 div.checkBox-wrap > div.box:nth-child(2) {width: 161px;}
+#section1 div.checkBox-wrap > div.box:nth-child(2) > form > label {display: block; }
+#section1 div.checkBox-wrap > div.box:nth-child(3) {width: 307px; }
+#section1 div.checkBox-wrap > div.box:nth-child(3) >form {display: flex;}
+#section1 div.checkBox-wrap > div.box:nth-child(3) > form > div {}
+#section1 div.checkBox-wrap > div.box:nth-child(3) > form > div > label {display: block;}
+#section1 div.checkBox-wrap > div.box:nth-child(3) > form > div + div {margin-left: 10px;}
+#section1 div.checkBox-wrap > div.box:nth-child(4) {width: 393px;}
+#section1 div.checkBox-wrap > div.box:nth-child(2) {width: 161px;}

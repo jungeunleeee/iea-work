@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>r관리자페이지>서비스현황>돌보미정보</title>
+  <link rel="stylesheet" href="../css/style-pc.css" />
+  <link rel="stylesheet" href="../css/web-font.css" />
+</head>
+
+<body class="admin">
+  <div id="wrapper" >
+    <a href="#main" id="skip-nav">본문 바로가기</a>
+    <header id="header"></header>
+    
+    <main id="main">
+      <h2>관리자 페이지 > 서비스 현황 > 돌보미 정보</h2>
+      <section id="section1" class="sec">
+
+        <div class="content-box">
+          <div class="selectBox-wrap">
+            <ul class="select-list">
+              <li>
+                <span class="title">시행기관</span>
+                <select name="agency">
+                  <option value="">가</option>
+                  <option value="">나</option>
+                  <option value="">다</option>
+                  <option value="">라</option>
+                </select>
+              </li>
+              <li>
+                <span class="title">성명</span>
+                <select name="name">
+                  <option value="">가</option>
+                  <option value="">나</option>
+                  <option value="">다</option>
+                  <option value="">라</option>
+                </select>
+              </li>
+              <li>
+                <span class="title">성별</span>
+                <select name="gender">
+                  <option value="">가</option>
+                  <option value="">나</option>
+                  <option value="">다</option>
+                  <option value="">라</option>
+                </select>
+              </li>
+              <li>
+                <span class="title">나이</span>
+                <select name="age">
+                  <option value="">가</option>
+                  <option value="">나</option>
+                  <option value="">다</option>
+                  <option value="">라</option>
+                </select>
+                <span>~</span>
+                <select name="age">
+                  <option value="">가</option>
+                  <option value="">나</option>
+                  <option value="">다</option>
+                  <option value="">라</option>
+                </select>
+              </li>
+              <li>
+                <span class="title">시행기관</span>
+                <select name="agency">
+                  <option value="">가</option>
+                  <option value="">나</option>
+                  <option value="">다</option>
+                  <option value="">라</option>
+                </select>
+              </li>
+            </ul>
+            <button type="submit" class="lookup_btn">조회</button>
+          </div>
+
+          <div class="checkBox-wrap">
+            <!-- <ul>
+              <li>주소지</li>
+              <li>활동 희망장소</li>
+              <li>활동 희망대상</li>
+              <li>활동 가능시간</li>
+            </ul> -->
+            <div class="box" style="border: 1px solid black">
+              <strong class="title_item">주소지</strong>
+              <ul class="list" style="border: 1px solid black">
+                <li>강서구</li>
+                <li>양천구</li>
+              </ul>
+            </div>
+  
+            <div class="box">
+              <strong class="title">활동 희망장소</strong>
+              <form>
+                <label class="container" for="sitter-family">
+                  <input type="checkbox" checked="checked" id="sitter-family" />
+                  <span class="checkmark"></span>
+                  돌보미 가정
+                </label>
+  
+                <label class="container" for="user-family">
+                  <input type="checkbox" id="user-family" />
+                  <span class="checkmark"></span>
+                  이용자 가족
+                </label>
+  
+                <label class="container" for="educare">
+                  <input type="checkbox" id="educare" />
+                  <span class="checkmark"></span>
+                  교육, 치료시설 내
+                </label>
+  
+                <label class="container" for="movesupport">
+                  <input type="checkbox" id="movesupport" />
+                  <span class="checkmark"></span>
+                  지원기관
+                </label>
+  
+                <label class="container" for="etc">
+                  <input type="checkbox" id="etc" />
+                  <span class="checkmark"></span>
+                  기타
+                </label>
+              </form>
+            </div>
+  
+            <div class="box">
+              <strong class="title">활동 희망대상</strong>
+              <form class="checkbox-wrap list">
+                <div>
+                  <label class="container" for="autism">
+                    <input type="checkbox" checked="checked" id="autism" />
+                    <span class="checkmark"></span>
+                    자폐성
+                  </label>
+                  <label class="container" for="intellectual">
+                    <input type="checkbox" id="intellectual" />
+                    <span class="checkmark"></span>
+                    지적
+                  </label>
+                  <label class="container" for="brainLesions">
+                    <input type="checkbox" id="brainLesions" />
+                    <span class="checkmark"></span>
+                    뇌병변
+                  </label>
+                  <label class="container" for="physical">
+                    <input type="checkbox" id="physical" />
+                    <span class="checkmark"></span>
+                    지체
+                  </label>
+                  <label>
+                    <input type="checkbox" id="visual" />
+                    <span class="checkmark"></span>
+                    시각
+                  </label>
+                </div>
+                <div>
+                  <label class="container" for="ear">
+                    <input type="checkbox" id="ear" />
+                    <span class="checkmark"></span>
+                    청각
+                  </label>
+                  <label class="container" for="mental">
+                    <input type="checkbox" id="mental" />
+                    <span class="checkmark"></span>
+                    정신
+                  </label>
+                  <label class="container" for="kidney">
+                    <input type="checkbox" id="kidney" />
+                    <span class="checkmark"></span>
+                    신장
+                  </label>
+                  <label class="container" for="heart">
+                    <input type="checkbox" id="heart" />
+                    <span class="checkmark"></span>
+                    심장
+                  </label>
+                  <label class="container" for="respiratory">
+                    <input type="checkbox" id="respiratory" />
+                    <span class="checkmark"></span>
+                    호흡기
+                  </label>
+                </div>
+                <div>
+                  <label class="container" for="liver">
+                    <input type="checkbox" id="liver" />
+                    <span class="checkmark"></span>
+                    간
+                  </label>
+                  <label class="container" for="destiny">
+                    <input type="checkbox" id="destiny" />
+                    <span class="checkmark"></span>
+                    인연
+                  </label>
+                  <label class="container" for="language">
+                    <input type="checkbox" id="language" />
+                    <span class="checkmark"></span>
+                    언어
+                  </label>
+                </div>
+              </form>
+            </div>
+            
+            <div class="box">
+              <strong class="title">활동 가능시간</strong>
+              <form class="radio-wrap list">
+                <label class="container" for="appointed">
+                  <input type="radio" id="appointed" name="when" />
+                  <span class="checkmark"></span>
+                  지정
+                </label>
+                <label class="container" for="whenever">
+                  <input type="radio" id="whenever" name="when" />
+                  <span class="checkmark"></span>
+                  언제든지
+                </label>
+              </form>
+  
+              <form class="checkbox-wrap list">
+                <label class="container" for="mon">
+                  <input type="checkbox" id="mon" />
+                  <span class="checkmark"></span>
+                  월
+                </label>
+                <label class="container" for="tue">
+                  <input type="checkbox" id="tue" />
+                  <span class="checkmark"></span>
+                  화
+                </label>
+                <label class="container" for="wed">
+                  <input type="checkbox" id="wed" />
+                  <span class="checkmark"></span>
+                  수
+                </label>
+                <label class="container" for="thu">
+                  <input type="checkbox" id="thu" />
+                  <span class="checkmark"></span>
+                  목
+                </label>
+                <label class="container" for="fri">
+                  <input type="checkbox" id="fri" />
+                  <span class="checkmark"></span>
+                  금
+                </label>
+                <label class="container" for="sat">
+                  <input type="checkbox" id="sat" />
+                  <span class="checkmark"></span>
+                  토
+                </label>
+                <label class="container" for="sun">
+                  <input type="checkbox" id="sun" />
+                  <span class="checkmark"></span>
+                  일
+                </label>
+              </form>
+              <div>
+                <span class="ir-hidden">시간</span>
+                <select name="time">
+                  <option value="">9시</option>
+                  <option value="">9시</option>
+                  <option value="">9시</option>
+                  <option value="">9시</option>
+                </select>
+                <span>~</span>
+                <select name="time">
+                  <option value="">9시</option>
+                  <option value="">9시</option>
+                  <option value="">9시</option>
+                  <option value="">9시</option>
+                </select>
+                <span>(총 8시간)</span>
+              </div>
+              <fieldset>
+                <label for="prefer">우대사항</label>
+                <input type="text" id="prefer" />
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="secion2">
+        <h2 class="ir-hidden">사용자 리스트</h2>
+        <div class="content-box">
+          <div class="exel-aria">
+            <div>
+              <input type="file" id="a"/>
+              <label for="a">파일업로드</label>
+            </div>
+            <a href="#" class="download_btn" download="test.txt">Excel 다운로드</a>
+          </div>
+          <div class="select-aria">
+            <a href="#" class="find_btn">3개월 이상 활동 공백 돌보미 찾기</a>
+            <select name="number">
+              <option value="">10</option>
+              <option value="">11</option>
+              <option value="">12</option>
+              <option value="">13</option>
+            </select>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>연변</th>
+                <th>시행기관</th>
+                <th>성명</th>
+                <th>성별</th>
+                <th>나이</th>
+                <th>활동가능 지역</th>
+                <th>활동희망 장소</th>
+                <th>자격증 여부</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>120</td>
+                <td>서울</td>
+                <td>김하나</td>
+                <td>여</td>
+                <td>41</td>
+                <td>강북구,도봉구,노원구</td>
+                <td>모두가능</td>
+                <td>워딩 필요</td>
+              </tr>
+              <tr>
+                <td>120</td>
+                <td>서울</td>
+                <td>김하나</td>
+                <td>여</td>
+                <td>41</td>
+                <td>강북구,도봉구,노원구</td>
+                <td>모두가능</td>
+                <td>워딩 필요</td>
+              </tr>
+              <tr>
+                <td>120</td>
+                <td>서울</td>
+                <td>김하나</td>
+                <td>여</td>
+                <td>41</td>
+                <td>강북구,도봉구,노원구</td>
+                <td>모두가능</td>
+                <td>워딩 필요</td>
+              </tr>
+              <tr>
+                <td>120</td>
+                <td>서울</td>
+                <td>김하나</td>
+                <td>여</td>
+                <td>41</td>
+                <td>강북구,도봉구,노원구</td>
+                <td>모두가능</td>
+                <td>워딩 필요</td>
+              </tr>
+              <tr>
+                <td>120</td>
+                <td>서울</td>
+                <td>김하나</td>
+                <td>여</td>
+                <td>41</td>
+                <td>강북구,도봉구,노원구</td>
+                <td>모두가능</td>
+                <td>워딩 필요</td>
+              </tr>
+              <tr>
+                <td>120</td>
+                <td>서울</td>
+                <td>김하나</td>
+                <td>여</td>
+                <td>41</td>
+                <td>강북구,도봉구,노원구</td>
+                <td>모두가능</td>
+                <td>워딩 필요</td>
+              </tr>
+              <tr>
+                <td>120</td>
+                <td>서울</td>
+                <td>김하나</td>
+                <td>여</td>
+                <td>41</td>
+                <td>강북구,도봉구,노원구</td>
+                <td>모두가능</td>
+                <td>워딩 필요</td>
+              </tr>
+              <tr>
+                <td>120</td>
+                <td>서울</td>
+                <td>김하나</td>
+                <td>여</td>
+                <td>41</td>
+                <td>강북구,도봉구,노원구</td>
+                <td>모두가능</td>
+                <td>워딩 필요</td>
+              </tr>
+              <tr>
+                <td>120</td>
+                <td>서울</td>
+                <td>김하나</td>
+                <td>여</td>
+                <td>41</td>
+                <td>강북구,도봉구,노원구</td>
+                <td>모두가능</td>
+                <td>워딩 필요</td>
+              </tr>
+              
+            </tbody>
+          </table>
+  
+        </div>
+      </section>
+
+    </main>
+
+   
+  </div>
+
+</body>
+
+</html>

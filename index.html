@@ -8,6 +8,7 @@
   <title>장애아가족 양육지원 서비스 관련 시스템</title>
   <link rel="stylesheet" href="css/style-pc.css" />
   <link rel="stylesheet" href="css/web-font.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
                   이용자
                 </label>
 
-                <label class="container"  for="sitter">
+                <label class="container" for="sitter">
                   <input type="radio" id="sitter" name="user-account" />
                   <span class="checkmark"></span>
                   돌보미
@@ -66,7 +67,10 @@
                 <label class="container" for="login-status">
                   <input type="checkbox" id="login-status" />
                   <span class="checkmark"></span>
-                  <p>로그인 상태 유지</p>
+                  <!-- <span class="checkmark">                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 6.50258L4.49817 10L13 1.5" stroke="white" stroke-width="2"/>
+                    </svg> -->
+                  <span>로그인 상태 유지</span>
                 </label>
               </li>
 
@@ -74,37 +78,62 @@
                 <a href="#">아이디/비밀번호 찾기</a>
               </li>
             </ul>
-            <button type="submit" id="login">로그인</button>
+            <button type="submit" id="login" class="btn">로그인</button>
+            <div class="button-area">
+              <button type="button" class="popup">팝업창1</button>
+              <button type="button" class="popup">팝업창2</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="layer-popup pop1">
-        <a href="#">
-          <div class="layer-box">
-            <a href="close-btn">닫기</a>
-            <h2>아이디/비밀번호</h2>
-            <div class="inner-box">
-              <p>아이디 또는 비밀번호가<br /> 일치하지 않습니다.</p>
-              <button type="button">확인</button>
-            </div>
+      <div id="popup-01" class="layer-popup">
+        <a href="#"></a>
+        <div class="layer-box">
+          <a href="#" class="close-btn">닫기</a>
+          <h2>아이디/비밀번호</h2>
+          <div class="inner-box">
+            <p>아이디 또는 비밀번호가<br /> 일치하지 않습니다.</p>
+            <button type="button" class="confirm">확인</button>
           </div>
-        </a>
+        </div>
+        <a href="#"></a>
       </div>
-      <div class="layer-popup pop2">
-        <a href="#">
-          <div class="layer-box">
-            <a href="close-btn">닫기</a>
-            <h2>아이디/비밀번호</h2>
-            <div class="inner-box">
-              <p>사용된 계정입니다.<br />
-                소속기관에 문의 하십시오.</p>
-              <button type="button">확인</button>
-            </div>
+
+      <div id="popup-02" class="layer-popup">
+        <a href="#"></a>
+        <div class="layer-box">
+          <a href="#" class="close-btn">닫기</a>
+          <h2>아이디/비밀번호</h2>
+          <div class="inner-box">
+            <p>사용된 계정입니다.<br />
+              소속기관에 문의 하십시오.</p>
+            <button type="button" class="confirm">확인</button>
           </div>
-        </a>
+        </div>
+        <a href="#"></a>
       </div>
     </main>
   </div>
+  
+  <script>
+    // 팝업창 나오기
+    $('#main div.button-area > button.popup').on('click', function() {
+      var index = $(this).index();
+      $('div.layer-popup:eq('+ index +')').addClass('on');
+    });
+
+    $('div.layer-popup a.close-btn').on('click', function() {
+      $('div.layer-popup').removeClass('on');
+    });
+
+    $('div.layer-popup button.confirm').on('click', function() {
+      $('div.layer-popup').removeClass('on');
+    });
+
+
+
+
+  </script>
 
 </body>
 
