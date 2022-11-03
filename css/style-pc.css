@@ -127,11 +127,13 @@ body.sub #main div.tab-contents #tabcontent2 > button {margin-top: 52px;}
 /* body admin */
 body.admin > div#wrapper {background-color: skyblue;}
 body.admin > div#wrapper > #main {padding-left: 302px; box-sizing: border-box;}
+body.admin > div#wrapper > #main > .sec {width: 1180px;   box-sizing: border-box; }
+body.admin > div#wrapper > #main > .sec > div.content-box {display: block; box-sizing: border-box;}
+
 body.admin > div#wrapper > #main > #section1 {
-    width: 1180px;   box-sizing: border-box; 
     padding: 36px 45px 16px; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08); background-color: #fff;
 border-radius: 28px; margin-top: 28px;}
-body.admin > div#wrapper > #main > #section1 > div.content-box {display: block; box-sizing: border-box;}
+
 
 body.admin > div#wrapper > #main > #section1 > h2 {display: inline-block;}
 #section1 div.selectBox-wrap {display: flex; justify-content: space-between;}
@@ -149,13 +151,20 @@ body.admin > div#wrapper > #main > #section1 > h2 {display: inline-block;}
 
 /* 밑에 */
 #section1 div.checkBox-wrap { display: flex; justify-content: space-between; } 
-#section1 div.checkBox-wrap > ul.list > li > ul { min-height: 180px; box-sizing: border-box; border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb;}
+#section1 div.checkBox-wrap > ul.list > li > ul { min-height: 184px; box-sizing: border-box; border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb;}
 #section1 div.checkBox-wrap > ul.list:not(:first-child) > li > ul{border-left: 1px solid #dbdbdb;}
 #section1 div.checkBox-wrap > ul.list:first-child > li > ul {border-left: 1px solid #dbdbdb;}
 #section1 div.checkBox-wrap > ul.list:last-child > li > ul {border-right: 1px solid #dbdbdb;}
 #section1 div.checkBox-wrap > ul.list > li > ul > li{margin-bottom: 13px;}
 
-#section1 div.checkBox-wrap > ul.list:nth-child(1) {width: 15%;}
+#section1 div.checkBox-wrap > ul.list:nth-child(1) {width: 15%; position: relative;}
+#section1 div.checkBox-wrap > ul.list:nth-child(1) > li > ul > li:last-child {position: absolute; right: 10px; bottom: 0px;}
+#section1 div.checkBox-wrap > ul.list:nth-child(1) > li > ul > li:last-child > button {font-size: 0; width: 18px; height: 18px; box-sizing: border-box; border: 2px solid #dbdbdb; border-radius: 3px; position: relative; background-color: #fff;}
+#section1 div.checkBox-wrap > ul.list:nth-child(1) > li > ul > li:last-child > button + button {margin-left: 4px;}
+#section1 div.checkBox-wrap > ul.list:nth-child(1) > li > ul > li:last-child > button::after{content:''; display: block; width: 11px; height: 2px; background: #757575; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 3px;} 
+#section1 div.checkBox-wrap > ul.list:nth-child(1) > li > ul > li:last-child > button.plus_btn::before {content:''; display: block; width: 2px; height: 11px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #757575; border-radius: 3px;}
+
+
 #section1 div.checkBox-wrap > ul.list:nth-child(2) {width: 20%;}
 
 /* 3번째: 활동 희망대상 */
@@ -189,6 +198,9 @@ body.admin > div#wrapper > #main > #section1 > h2 {display: inline-block;}
 #section1 div.checkBox-wrap ul.select-list > li {}
 #section1 div.checkBox-wrap ul.select-list > li > label {display: block;}
 
+/* body admin: section2  */
+#section2 {margin-top: 22px;}
+#section2 > div.content-box {background-color: red;}
 
 
 
