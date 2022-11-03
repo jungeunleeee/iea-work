@@ -79,206 +79,222 @@
           </div>
 
           <div class="checkBox-wrap">
-            <!-- <ul>
-              <li>주소지</li>
-              <li>활동 희망장소</li>
-              <li>활동 희망대상</li>
-              <li>활동 가능시간</li>
-            </ul> -->
-            <div class="box" style="border: 1px solid black">
-              <strong class="title_item">주소지</strong>
-              <ul class="list" style="border: 1px solid black">
-                <li>강서구</li>
-                <li>양천구</li>
-              </ul>
-            </div>
-  
-            <div class="box">
-              <strong class="title">활동 희망장소</strong>
-              <form>
-                <label class="container" for="sitter-family">
-                  <input type="checkbox" checked="checked" id="sitter-family" />
-                  <span class="checkmark"></span>
-                  돌보미 가정
-                </label>
-  
-                <label class="container" for="user-family">
-                  <input type="checkbox" id="user-family" />
-                  <span class="checkmark"></span>
-                  이용자 가족
-                </label>
-  
-                <label class="container" for="educare">
-                  <input type="checkbox" id="educare" />
-                  <span class="checkmark"></span>
-                  교육, 치료시설 내
-                </label>
-  
-                <label class="container" for="movesupport">
-                  <input type="checkbox" id="movesupport" />
-                  <span class="checkmark"></span>
-                  지원기관
-                </label>
-  
-                <label class="container" for="etc">
-                  <input type="checkbox" id="etc" />
-                  <span class="checkmark"></span>
-                  기타
-                </label>
-              </form>
-            </div>
-  
-            <div class="box">
-              <strong class="title">활동 희망대상</strong>
-              <form class="checkbox-wrap list">
-                <div>
-                  <label class="container" for="autism">
-                    <input type="checkbox" checked="checked" id="autism" />
-                    <span class="checkmark"></span>
-                    자폐성
-                  </label>
-                  <label class="container" for="intellectual">
-                    <input type="checkbox" id="intellectual" />
-                    <span class="checkmark"></span>
-                    지적
-                  </label>
-                  <label class="container" for="brainLesions">
-                    <input type="checkbox" id="brainLesions" />
-                    <span class="checkmark"></span>
-                    뇌병변
-                  </label>
-                  <label class="container" for="physical">
-                    <input type="checkbox" id="physical" />
-                    <span class="checkmark"></span>
-                    지체
-                  </label>
-                  <label>
-                    <input type="checkbox" id="visual" />
-                    <span class="checkmark"></span>
-                    시각
-                  </label>
-                </div>
-                <div>
-                  <label class="container" for="ear">
-                    <input type="checkbox" id="ear" />
-                    <span class="checkmark"></span>
-                    청각
-                  </label>
-                  <label class="container" for="mental">
-                    <input type="checkbox" id="mental" />
-                    <span class="checkmark"></span>
-                    정신
-                  </label>
-                  <label class="container" for="kidney">
-                    <input type="checkbox" id="kidney" />
-                    <span class="checkmark"></span>
-                    신장
-                  </label>
-                  <label class="container" for="heart">
-                    <input type="checkbox" id="heart" />
-                    <span class="checkmark"></span>
-                    심장
-                  </label>
-                  <label class="container" for="respiratory">
-                    <input type="checkbox" id="respiratory" />
-                    <span class="checkmark"></span>
-                    호흡기
-                  </label>
-                </div>
-                <div>
-                  <label class="container" for="liver">
-                    <input type="checkbox" id="liver" />
-                    <span class="checkmark"></span>
-                    간
-                  </label>
-                  <label class="container" for="destiny">
-                    <input type="checkbox" id="destiny" />
-                    <span class="checkmark"></span>
-                    인연
-                  </label>
-                  <label class="container" for="language">
-                    <input type="checkbox" id="language" />
-                    <span class="checkmark"></span>
-                    언어
-                  </label>
-                </div>
-              </form>
-            </div>
-            
-            <div class="box">
-              <strong class="title">활동 가능시간</strong>
-              <form class="radio-wrap list">
-                <label class="container" for="appointed">
-                  <input type="radio" id="appointed" name="when" />
-                  <span class="checkmark"></span>
-                  지정
-                </label>
-                <label class="container" for="whenever">
-                  <input type="radio" id="whenever" name="when" />
-                  <span class="checkmark"></span>
-                  언제든지
-                </label>
-              </form>
-  
-              <form class="checkbox-wrap list">
-                <label class="container" for="mon">
-                  <input type="checkbox" id="mon" />
-                  <span class="checkmark"></span>
-                  월
-                </label>
-                <label class="container" for="tue">
-                  <input type="checkbox" id="tue" />
-                  <span class="checkmark"></span>
-                  화
-                </label>
-                <label class="container" for="wed">
-                  <input type="checkbox" id="wed" />
-                  <span class="checkmark"></span>
-                  수
-                </label>
-                <label class="container" for="thu">
-                  <input type="checkbox" id="thu" />
-                  <span class="checkmark"></span>
-                  목
-                </label>
-                <label class="container" for="fri">
-                  <input type="checkbox" id="fri" />
-                  <span class="checkmark"></span>
-                  금
-                </label>
-                <label class="container" for="sat">
-                  <input type="checkbox" id="sat" />
-                  <span class="checkmark"></span>
-                  토
-                </label>
-                <label class="container" for="sun">
-                  <input type="checkbox" id="sun" />
-                  <span class="checkmark"></span>
-                  일
-                </label>
-              </form>
-              <div>
-                <span class="ir-hidden">시간</span>
-                <select name="time">
-                  <option value="">9시</option>
-                  <option value="">9시</option>
-                  <option value="">9시</option>
-                  <option value="">9시</option>
-                </select>
-                <span>~</span>
-                <select name="time">
-                  <option value="">9시</option>
-                  <option value="">9시</option>
-                  <option value="">9시</option>
-                  <option value="">9시</option>
-                </select>
-                <span>(총 8시간)</span>
-              </div>
-              <fieldset>
-                <label for="prefer">우대사항</label>
-                <input type="text" id="prefer" />
-              </fieldset>
-            </div>
+            <ul class="list">
+              <li>
+                <strong>주소지</strong>
+                <ul class="select-list">
+                  <li>강서구</li>
+                  <li>양천구</li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="list">
+              <li>
+                <strong>활동희망 장소</strong>
+                <ul class="select-list">
+                  <li>
+                    <label class="container" for="sitter-family">
+                      <input type="checkbox" checked="checked" id="sitter-family" />
+                      <span class="checkmark"></span>
+                      돌보미 가정
+                    </label>
+                  </li>
+                  
+                  <li>
+                    <label class="container" for="user-family">
+                      <input type="checkbox" id="user-family" />
+                      <span class="checkmark"></span>
+                      이용자 가족
+                    </label>
+                  </li>
+
+                  <li>
+                    <label class="container" for="educare">
+                      <input type="checkbox" id="educare" />
+                      <span class="checkmark"></span>
+                      교육, 치료시설 내
+                    </label>
+                  </li>
+
+                  <li>
+                    <label class="container" for="movesupport">
+                      <input type="checkbox" id="movesupport" />
+                      <span class="checkmark"></span>
+                      지원기관
+                    </label>
+                  </li>
+
+                  <li>
+                    <label class="container" for="etc">
+                      <input type="checkbox" id="etc" />
+                      <span class="checkmark"></span>
+                      기타
+                    </label>
+                  </li>    
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="list">
+              <li>
+                <strong>활동 희망대상</strong>
+                <ul class="select-list">
+                  <li>
+                    <label class="container" for="autism">
+                      <input type="checkbox" checked="checked" id="autism" />
+                      <span class="checkmark"></span>
+                      자폐성
+                    </label>
+                    <label class="container" for="intellectual">
+                      <input type="checkbox" id="intellectual" />
+                      <span class="checkmark"></span>
+                      지적
+                    </label>
+                    <label class="container" for="brainLesions">
+                      <input type="checkbox" id="brainLesions" />
+                      <span class="checkmark"></span>
+                      뇌병변
+                    </label>
+                    <label class="container" for="physical">
+                      <input type="checkbox" id="physical" />
+                      <span class="checkmark"></span>
+                      지체
+                    </label>
+                    <label>
+                      <input type="checkbox" id="visual" />
+                      <span class="checkmark"></span>
+                      시각
+                    </label>
+                  </li>
+
+                  <li>
+                    <label class="container" for="ear">
+                      <input type="checkbox" id="ear" />
+                      <span class="checkmark"></span>
+                      청각
+                    </label>
+                    <label class="container" for="mental">
+                      <input type="checkbox" id="mental" />
+                      <span class="checkmark"></span>
+                      정신
+                    </label>
+                    <label class="container" for="kidney">
+                      <input type="checkbox" id="kidney" />
+                      <span class="checkmark"></span>
+                      신장
+                    </label>
+                    <label class="container" for="heart">
+                      <input type="checkbox" id="heart" />
+                      <span class="checkmark"></span>
+                      심장
+                    </label>
+                    <label class="container" for="respiratory">
+                      <input type="checkbox" id="respiratory" />
+                      <span class="checkmark"></span>
+                      호흡기
+                    </label>
+                  </li>
+                  <li>
+                    <label class="container" for="liver">
+                      <input type="checkbox" id="liver" />
+                      <span class="checkmark"></span>
+                      간
+                    </label>
+                    <label class="container" for="destiny">
+                      <input type="checkbox" id="destiny" />
+                      <span class="checkmark"></span>
+                      인연
+                    </label>
+                    <label class="container" for="language">
+                      <input type="checkbox" id="language" />
+                      <span class="checkmark"></span>
+                      언어
+                    </label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="list">
+              <li>
+                <strong>활동 가능시간</strong>
+                <ul class="select-list">
+                  <li class="radio-wrap list">
+                    <label class="container" for="appointed">
+                      <input type="radio" id="appointed" name="when" />
+                      <span class="checkmark"></span>
+                      지정
+                    </label>
+                    <label class="container" for="whenever">
+                      <input type="radio" id="whenever" name="when" />
+                      <span class="checkmark"></span>
+                      언제든지
+                    </label>
+                  </li>
+      
+                  <li class="checkbox-wrap list">
+                    <label class="container" for="mon">
+                      <input type="checkbox" id="mon" />
+                      <span class="checkmark"></span>
+                      월
+                    </label>
+                    <label class="container" for="tue">
+                      <input type="checkbox" id="tue" />
+                      <span class="checkmark"></span>
+                      화
+                    </label>
+                    <label class="container" for="wed">
+                      <input type="checkbox" id="wed" />
+                      <span class="checkmark"></span>
+                      수
+                    </label>
+                    <label class="container" for="thu">
+                      <input type="checkbox" id="thu" />
+                      <span class="checkmark"></span>
+                      목
+                    </label>
+                    <label class="container" for="fri">
+                      <input type="checkbox" id="fri" />
+                      <span class="checkmark"></span>
+                      금
+                    </label>
+                    <label class="container" for="sat">
+                      <input type="checkbox" id="sat" />
+                      <span class="checkmark"></span>
+                      토
+                    </label>
+                    <label class="container" for="sun">
+                      <input type="checkbox" id="sun" />
+                      <span class="checkmark"></span>
+                      일
+                    </label>
+                  </li>
+
+                  <li>
+                    <span class="ir-hidden">시간</span>
+                    <select name="time">
+                      <option value="">9시</option>
+                      <option value="">9시</option>
+                      <option value="">9시</option>
+                      <option value="">9시</option>
+                    </select>
+                    <span>~</span>
+                    <select name="time">
+                      <option value="">9시</option>
+                      <option value="">9시</option>
+                      <option value="">9시</option>
+                      <option value="">9시</option>
+                    </select>
+                    <span>(총 8시간)</span>
+                  </li>
+                  <fieldset>
+                    <label for="prefer">우대사항</label>
+                    <input type="text" id="prefer" />
+                  </fieldset>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

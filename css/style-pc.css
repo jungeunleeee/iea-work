@@ -111,7 +111,7 @@ body.sub #main div.tab-contents #tabcontent2 > button {margin-top: 52px;}
 /* body admin */
 body.admin > div#wrapper {background-color: skyblue;}
 body.admin > div#wrapper > #main {padding-left: 302px; box-sizing: border-box;}
-body.admin > div#wrapper > #main > .sec {width: 1180px;}
+body.admin > div#wrapper > #main > .sec {width: 1180px; box-sizing: border-box;}
 body.admin > div#wrapper > #main > #section1 {margin-top: 28px; background-color: yellow; }
 body.admin > div#wrapper > #main > #section1 > div.content-box {display: block; padding: 36px 0 0 45px; box-sizing: border-box; }
 
@@ -125,7 +125,15 @@ body.admin > div#wrapper > #main > #section1 > h2 {display: inline-block;}
 
 #section1 ul.select-list > li:nth-child(4) >  span {margin: 0 16px;} 
 
+
+/* 밑에 */
 #section1 div.checkBox-wrap {display: flex; width: 973px;} 
+#section1 div.checkBox-wrap > ul.list {}
+#section1 div.checkBox-wrap > ul.list > li { min-width: 112px; margin-top: 24px;}
+#section1 div.checkBox-wrap > ul.list > li > strong {padding-left: 18px; margin-bottom: 18px; background-color: pink;}
+#section1 div.checkBox-wrap ul.select-list { background-color: red; margin-top: 18px;}
+#section1 div.checkBox-wrap ul.select-list > li {}
+#section1 div.checkBox-wrap ul.select-list > li > label {}
 
 
 
@@ -133,14 +141,4 @@ body.admin > div#wrapper > #main > #section1 > h2 {display: inline-block;}
 
 
 
-#section1 div.checkBox-wrap > div.box {padding: 13px 0 0 16px; min-width: 112px;}
-#section1 div.checkBox-wrap > div.box > strong {}
-#section1 div.checkBox-wrap > div.box:nth-child(2) {width: 161px;}
-#section1 div.checkBox-wrap > div.box:nth-child(2) > form > label {display: block; }
-#section1 div.checkBox-wrap > div.box:nth-child(3) {width: 307px; }
-#section1 div.checkBox-wrap > div.box:nth-child(3) >form {display: flex;}
-#section1 div.checkBox-wrap > div.box:nth-child(3) > form > div {}
-#section1 div.checkBox-wrap > div.box:nth-child(3) > form > div > label {display: block;}
-#section1 div.checkBox-wrap > div.box:nth-child(3) > form > div + div {margin-left: 10px;}
-#section1 div.checkBox-wrap > div.box:nth-child(4) {width: 393px;}
-#section1 div.checkBox-wrap > div.box:nth-child(2) {width: 161px;}
+
