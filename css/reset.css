@@ -10,4 +10,6 @@ a {color: inherit; text-decoration: inherit;}
 li {list-style: none;}
 address, em, i, cite {font-style: normal;}
 .ir-hidden {position: absolute; left: -9999px;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
 

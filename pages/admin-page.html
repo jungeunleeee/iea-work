@@ -24,7 +24,7 @@
             <ul class="select-list">
               <li>
                 <span class="title">시행기관</span>
-                <select name="agency">
+                <select name="agency" class="select_box">
                   <option value="">가</option>
                   <option value="">나</option>
                   <option value="">다</option>
@@ -33,7 +33,7 @@
               </li>
               <li>
                 <span class="title">성명</span>
-                <select name="name">
+                <select name="name" class="select_box">
                   <option value="">가</option>
                   <option value="">나</option>
                   <option value="">다</option>
@@ -42,7 +42,7 @@
               </li>
               <li>
                 <span class="title">성별</span>
-                <select name="gender">
+                <select name="gender" class="select_box">
                   <option value="">가</option>
                   <option value="">나</option>
                   <option value="">다</option>
@@ -51,14 +51,14 @@
               </li>
               <li>
                 <span class="title">나이</span>
-                <select name="age">
+                <select name="age" class="select_box">
                   <option value="">가</option>
                   <option value="">나</option>
                   <option value="">다</option>
                   <option value="">라</option>
                 </select>
                 <span>~</span>
-                <select name="age">
+                <select name="age" class="select_box">
                   <option value="">가</option>
                   <option value="">나</option>
                   <option value="">다</option>
@@ -67,7 +67,7 @@
               </li>
               <li>
                 <span class="title">시행기관</span>
-                <select name="agency">
+                <select name="agency" class="select_box">
                   <option value="">가</option>
                   <option value="">나</option>
                   <option value="">다</option>
@@ -306,129 +306,167 @@
       <section id="section2" class="sec">
         <h2 class="ir-hidden">사용자 리스트</h2>
         <div class="content-box">
-          <div class="exel-aria">
-            <div>
+          <div class="search-area">
+            <div class="exelbutton-wrap">
               <input type="file" id="a"/>
-              <label for="a">파일업로드</label>
+              <label for="a">Exel 업로드</label>
+              <a href="#" class="download_btn" download="test.txt">Excel 다운로드</a>
             </div>
-            <a href="#" class="download_btn" download="test.txt">Excel 다운로드</a>
+            <div class="select-area">
+              <a href="#" class="find_btn">3개월 이상 활동 공백 돌보미 찾기</a>
+              <select name="number" class="select_box">
+                <option value="">10</option>
+                <option value="">11</option>
+                <option value="">12</option>
+                <option value="">13</option>
+              </select>
+            </div>
           </div>
-          <div class="select-aria">
-            <a href="#" class="find_btn">3개월 이상 활동 공백 돌보미 찾기</a>
-            <select name="number">
-              <option value="">10</option>
-              <option value="">11</option>
-              <option value="">12</option>
-              <option value="">13</option>
-            </select>
+
+          <div class="box">
+            <!-- <ul class="table-title">
+              <li>연변</li>
+              <li>시행기관</li>
+              <li>성명</li>
+              <li>성별</li>
+              <li>나이</li>
+              <li>활동가능 지역</li>
+              <li>활동희망 장소</li>
+              <li>자격증 여부</li>
+            </ul> -->
+            <table>
+              <thead class="table-title">
+                <tr>
+                  <td>연변</td>
+                  <td>시행기관</td>
+                  <td>성명</td>
+                  <td>성별</td>
+                  <td>나이</td>
+                  <td>활동가능 지역</td>
+                  <td>활동희망 장소</td>
+                  <td>자격증 여부</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>120</td>
+                  <td>서울</td>
+                  <td>김하나</td>
+                  <td>여</td>
+                  <td>41</td>
+                  <td>강북구,도봉구,노원구</td>
+                  <td>모두가능</td>
+                  <td>워딩 필요</td>
+                </tr>
+                <tr>
+                  <td>120</td>
+                  <td>서울</td>
+                  <td>김하나</td>
+                  <td>여</td>
+                  <td>41</td>
+                  <td>강북구,도봉구,노원구</td>
+                  <td>모두가능</td>
+                  <td>워딩 필요</td>
+                </tr>
+                <tr>
+                  <td>120</td>
+                  <td>서울</td>
+                  <td>김하나</td>
+                  <td>여</td>
+                  <td>41</td>
+                  <td>강북구,도봉구,노원구</td>
+                  <td>모두가능</td>
+                  <td>워딩 필요</td>
+                </tr>
+                <tr>
+                  <td>120</td>
+                  <td>서울</td>
+                  <td>김하나</td>
+                  <td>여</td>
+                  <td>41</td>
+                  <td>강북구,도봉구,노원구</td>
+                  <td>모두가능</td>
+                  <td>워딩 필요</td>
+                </tr>
+                <tr>
+                  <td>120</td>
+                  <td>서울</td>
+                  <td>김하나</td>
+                  <td>여</td>
+                  <td>41</td>
+                  <td>강북구,도봉구,노원구</td>
+                  <td>모두가능</td>
+                  <td>워딩 필요</td>
+                </tr>
+                <tr>
+                  <td>120</td>
+                  <td>서울</td>
+                  <td>김하나</td>
+                  <td>여</td>
+                  <td>41</td>
+                  <td>강북구,도봉구,노원구</td>
+                  <td>모두가능</td>
+                  <td>워딩 필요</td>
+                </tr>
+                <tr>
+                  <td>120</td>
+                  <td>서울</td>
+                  <td>김하나</td>
+                  <td>여</td>
+                  <td>41</td>
+                  <td>강북구,도봉구,노원구</td>
+                  <td>모두가능</td>
+                  <td>워딩 필요</td>
+                </tr>
+                <tr>
+                  <td>120</td>
+                  <td>서울</td>
+                  <td>김하나</td>
+                  <td>여</td>
+                  <td>41</td>
+                  <td>강북구,도봉구,노원구</td>
+                  <td>모두가능</td>
+                  <td>워딩 필요</td>
+                </tr>
+                <tr>
+                  <td>120</td>
+                  <td>서울</td>
+                  <td>김하나</td>
+                  <td>여</td>
+                  <td>41</td>
+                  <td>강북구,도봉구,노원구</td>
+                  <td>모두가능</td>
+                  <td>워딩 필요</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pagelist-box">
+              <div>
+                <ul class="page-list">
+                  <li class="on">1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li>10</li>
+                </ul>
+                <div class="prev-area btn">
+                  <button button="button" class="pfPrev_btn">완전 처음으로 가기 버튼</button>
+                  <button button="button" class="prev_btn">이전버튼</button>
+                </div>
+  
+                <div class="next-area btn">
+                  <button button="button" class="pfNext_btn">완전 마지막 가기 버튼</button>
+                  <button button="button" class="next_btn">이전버튼</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>연변</th>
-                <th>시행기관</th>
-                <th>성명</th>
-                <th>성별</th>
-                <th>나이</th>
-                <th>활동가능 지역</th>
-                <th>활동희망 장소</th>
-                <th>자격증 여부</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>120</td>
-                <td>서울</td>
-                <td>김하나</td>
-                <td>여</td>
-                <td>41</td>
-                <td>강북구,도봉구,노원구</td>
-                <td>모두가능</td>
-                <td>워딩 필요</td>
-              </tr>
-              <tr>
-                <td>120</td>
-                <td>서울</td>
-                <td>김하나</td>
-                <td>여</td>
-                <td>41</td>
-                <td>강북구,도봉구,노원구</td>
-                <td>모두가능</td>
-                <td>워딩 필요</td>
-              </tr>
-              <tr>
-                <td>120</td>
-                <td>서울</td>
-                <td>김하나</td>
-                <td>여</td>
-                <td>41</td>
-                <td>강북구,도봉구,노원구</td>
-                <td>모두가능</td>
-                <td>워딩 필요</td>
-              </tr>
-              <tr>
-                <td>120</td>
-                <td>서울</td>
-                <td>김하나</td>
-                <td>여</td>
-                <td>41</td>
-                <td>강북구,도봉구,노원구</td>
-                <td>모두가능</td>
-                <td>워딩 필요</td>
-              </tr>
-              <tr>
-                <td>120</td>
-                <td>서울</td>
-                <td>김하나</td>
-                <td>여</td>
-                <td>41</td>
-                <td>강북구,도봉구,노원구</td>
-                <td>모두가능</td>
-                <td>워딩 필요</td>
-              </tr>
-              <tr>
-                <td>120</td>
-                <td>서울</td>
-                <td>김하나</td>
-                <td>여</td>
-                <td>41</td>
-                <td>강북구,도봉구,노원구</td>
-                <td>모두가능</td>
-                <td>워딩 필요</td>
-              </tr>
-              <tr>
-                <td>120</td>
-                <td>서울</td>
-                <td>김하나</td>
-                <td>여</td>
-                <td>41</td>
-                <td>강북구,도봉구,노원구</td>
-                <td>모두가능</td>
-                <td>워딩 필요</td>
-              </tr>
-              <tr>
-                <td>120</td>
-                <td>서울</td>
-                <td>김하나</td>
-                <td>여</td>
-                <td>41</td>
-                <td>강북구,도봉구,노원구</td>
-                <td>모두가능</td>
-                <td>워딩 필요</td>
-              </tr>
-              <tr>
-                <td>120</td>
-                <td>서울</td>
-                <td>김하나</td>
-                <td>여</td>
-                <td>41</td>
-                <td>강북구,도봉구,노원구</td>
-                <td>모두가능</td>
-                <td>워딩 필요</td>
-              </tr>
-              
-            </tbody>
-          </table>
+
   
         </div>
       </section>
