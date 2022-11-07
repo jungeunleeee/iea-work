@@ -125,9 +125,10 @@ body.sub #main div.tab-contents #tabcontent2{padding-top: 68px;}
 body.sub #main div.tab-contents #tabcontent2 > button {margin-top: 52px;}
 
 /* body admin */
-body.admin {height: auto;}
-body.admin > div#wrapper {background-color: skyblue;}
-body.admin > div#wrapper > #main {padding-left: 302px; box-sizing: border-box;}
+body.admin {}
+body.admin > div#wrapper {}
+body.admin > div#wrapper > #main {padding-left: 302px; box-sizing: border-box; padding-top: 70px;}
+body.admin > div#wrapper > #main > h2 {padding-top: 28px;}
 body.admin > div#wrapper > #main > .sec {width: 1180px;   box-sizing: border-box; }
 body.admin > div#wrapper > #main > .sec > div.content-box {display: block; box-sizing: border-box;}
 #section1 div.checkBox-wrap ul.list:not(:last-child) ul > li {font-size: 13px;}
@@ -217,29 +218,56 @@ select.select_box {width: 98px; height: 38px; border-radius: 8px; box-sizing: bo
 #section2 div.search-area > div > a.download_btn::after {content:''; width: 24px; height: 24px; position: absolute; left: 8px; top: 50%; transform: translateY(-50%); background: url('../img/exel.png') center center no-repeat;}
  #section2 div.search-area > div > a.download_btn {margin-left: 24px;}
 
-/* #section2 div.box {background-color: pink;}
-#section2 ul.table-title {display: flex; justify-content: space-between; text-align: center;} */
 
-#section2  table {margin-top: 10px; background-color: lime; width: 100%; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-radius: 16px 16px 0 0; }
-#section2  table > thead {text-align: center; height: 44px; background: #886AA3; }
+#section2 div.box { box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);  border-top-right-radius: 16px;border-bottom-right-radius: 26px; border-bottom-left-radius: 26px; border-top-left-radius: 16px;}
+#section2  table {margin-top: 10px; background-color: #fff; width: 100%; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-radius: 16px 16px 0 0; }
+#section2  table > thead {text-align: center; height: 44px; background: #886AA3; color: #fff; } 
 #section2 table > thead >  tr > td:first-child { border-radius: 16px 0 0 0;}
 #section2 table > thead >  tr > td:last-child { border-radius: 0 16px 0 0;}
 #section2  table > tbody {}
-#section2  table > tbody  > tr {height: 38px; text-align: center; }
+#section2  table > tbody  > tr {height: 38px; text-align: center; border-bottom: 1px solid #D9D9D9; box-sizing: border-box; }
 #section2  table > tbody  > tr > td {font-size: 14px; font-weight: 300;}
 
-#section2 div.pagelist-box {background-color: #fff;padding-top: 19px; padding-bottom: 15px; display: flex; justify-content: center;  }
-#section2 div.pagelist-box > div { display: flex; position: relative; background-color: red; justify-content: center; position: relative; width: 40%;}
-#section2 div.pagelist-box  ul.page-list { display: flex; background-color: skyblue;}
+#section2 div.pagelist-box {background-color: #fff;padding-top: 19px; padding-bottom: 15px; display: flex; justify-content: center; border-radius: 0 0 26px 26px; }
+#section2 div.pagelist-box > div { display: flex; position: relative;  justify-content: center; position: relative; width: 40%;}
+#section2 div.pagelist-box  ul.page-list { display: flex;}
 #section2 div.pagelist-box  ul.page-list > li {font-size: 16px; font-weight: 600; color: #757575;}
 #section2 div.pagelist-box ul.page-list > li.on {color: #292929; text-decoration: underline;} 
 #section2 div.pagelist-box ul.page-list > li + li {margin-left: 24px;}
-#section2 div.pagelist-box div.btn {background-color: blue; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
-#section2 div.pagelist-box div.btn.next-area {left: auto; right: 0;}
-#section2 div.pagelist-box div.btn.next-area > button + button {margin-left: 30px;}
-#section2 div.pagelist-box div.btn > button { font-size: 0;}
+#section2 div.pagelist-box div.btn-wrap { position: absolute; left: 0; top: 50%; transform: translateY(-50%); display: flex;}
+#section2 div.pagelist-box div.btn-wrap.next {left: auto; right: 0;}
+#section2 div.pagelist-box div.btn-wrap > button + button {margin-left: 30px;}
 
 
+div.btn-wrap > button {
+    font-size: 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(45deg);
+    position: relative;
+    border-bottom: 2px solid #56606B;
+    border-left: 2px solid #56606B;
+    border-right: none;
+    border-top: none;
+}
+div.btn-wrap > button.pfPrev_btn {position: relative;}
+
+div.btn-wrap > button.pfPrev_btn::after {
+    content:'';
+    display: block;
+    width: 2px;
+    height: 15px;
+    background-color: #56606B;
+    position: absolute;
+    left: -2px;
+    top: 3px;
+    transform: rotate(-45deg);
+}
+
+
+div.btn-wrap.next > button {
+    transform: rotate(-135deg); 
+} 
 
 
 
