@@ -1,16 +1,17 @@
 @import url('../css/reset.css');
 
 /* common */
-body {font-family:'NotoSansCJKkr', 'NotoSansKR'; font-size: 14px; color: #292929; box-sizing: border-box;  position: relative; width: 100%; height: 100vh;}
+html, body {height: 100%;}
+body {font-family:'NotoSansCJKkr', 'NotoSansKR'; font-size: 14px; color: #292929; box-sizing: border-box;  position: relative; width: 100%;}
 
-#wrapper {min-width: 1024px; overflow-y: auto; position: relative; margin: 0 auto; height: 100%;}
+#wrapper {min-width: 1024px; overflow-y: auto; position: relative; margin: 0 auto; height: 100%; }
 
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0,0,0,0.8); color : #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;} 
 #skip-nav:focus {top: 0;}
 
 
 
-#header {width: 100%;height: 68px; position: fixed; left: 0; top: 0; border-bottom: 1px solid #dbdbdb; box-sizing: border-box;}
+#header {position: fixed; left: 0; top: 0; width: 100%;height: 68px;  border-bottom: 1px solid #dbdbdb; background-color: #fff; box-sizing: border-box; z-index: 100000;}
 
 /* common */
 fieldset {padding: 0; border: none;}
@@ -19,7 +20,7 @@ fieldset > p {margin-bottom: 8px; color: #292929; font-weight: 400; text-align-l
 fieldset > input {width: 100%; height: 48px; box-sizing: border-box; border-radius: 3px; border: 1px solid #dedede;} 
 
 
-#main {width: 100%; box-sizing: border-box; padding-top: 68px; padding-bottom: 36px;}
+#main {width: 100%; height: 100%; box-sizing: border-box; padding-top: 68px; position: relative;}
 #main div.content-box {height: 100%; display: flex; justify-content: center; align-items: center;}
 #main button.btn {width: 380px; height: 48px; box-sizing: border-box; background-color: #9579ad; border-radius: 6px; border: transparent; font-size: 18px; color: #fff; font-weight: 600;}
 #main button:focus {outline: none;}
@@ -30,7 +31,7 @@ fieldset > input {width: 100%; height: 48px; box-sizing: border-box; border-radi
  label.check input {display: none;}
 label.check span.checkmark {
     position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 18px; width: 18px; background-color: #fff; border: 1px solid #D9D9D9; display: block; box-sizing: border-box;}
- label.check input:checked  ~ .checkmark::after {content:''; width: 12px; height: 6px; display: block; position: absolute; left: 50%; top: 5px; transform: translateX(-50%) rotate(-45deg); border-bottom: 2px solid #fff; border-left: 2px solid #fff; box-sizing: border-box;}
+ label.check input:checked  ~ .checkmark::after {content:''; width: 12px; height: 6px; display: block; position: absolute; left: 50%; top: 4px; transform: translateX(-50%) rotate(-45deg); border-bottom: 2px solid #fff; border-left: 2px solid #fff; box-sizing: border-box;}
 
 /* 체크박스가 체크 되었을 때 */
  label.check input:checked ~ .checkmark { box-sizing: border-box; border-radius: 3px; width: 18px; height: 18px; border: none; background-color: #9579AD;}
@@ -42,7 +43,7 @@ label.check span.checkmark {
 
 
 /* service-box */
-#main  div.service-box{width: 620px; height: 788px; border-radius: 8px; box-sizing: border-box; background-color: #fff;  border: 1px solid #dbdbdb; }
+#main  div.service-box{width: 620px; height: 788px; border-radius: 8px; box-sizing: border-box; background-color: pink;  border: 1px solid #dbdbdb; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) ; }
 #main > div.content-box > div.service-box > h1 {text-align: center; margin-top: 59px; font-size: 24px; font-weight: 600;}
 #main > div.content-box > div.service-box > div.inner-box {width: 380px; height: 419px; margin: 68px auto 0;}
 
@@ -101,7 +102,23 @@ div.layer-popup a.close-btn::before {transform: rotate(-45deg) translateX(-50%);
 div.layer-popup  div.inner-box {text-align: center;}
 div.layer-popup h2 {font-size: 16px; font-weight: 600; margin-bottom: 33px;}
 div.layer-popup p {font-weight: 400; margin-bottom: 36px;}
+div.layer-popup p.title-mini {font-size: 16px; color: #424242; font-weight: 500;}
 div.layer-popup button {padding: 9px 12px; font-size: 12px; font-weight: 700; width: 144px;height: 38px; background-color: #9579AD; border-radius: 3px; border: none; color: #fff}
+
+/* layer-popup: 프린트물 */
+#print-layer-popup {width: 600px; height: 800px;  box-sizing: border-box;padding: 15px 32px 38px; border-radius: 16px;  }
+#print-layer-popup > div.layer-popup {position: relative;}
+#print-layer-popup h2 {text-align: center; font-size: 24px; font-weight: 600;}
+#print-layer-popup ul.list > li {font-size: 18px; font-weight: 400;}
+#print-layer-popup ul.list > li + li {margin-top: 34px;}
+#print-layer-popup p.desc {margin-top: 79px; font-size: 18px; line-height: 1.5; font-weight: 400;}
+#print-layer-popup > div.layer-box > span {display: block; text-align: center; font-size: 16px; font-weight: 500; color: #000;}
+#print-layer-popup > div.layer-box > div.organization {margin-top: 34px; text-align: center; display: flex; justify-content: center; align-items: center; font-size: 16px; font-weight: 500; color: #000;}
+#print-layer-popup > div.layer-box span.stamp {display: block; width: 38px; height: 38px; background-color: red; margin-left: 20px;}
+#print-layer-popup > div.layer-box > input {position: absolute; bottom: 34px; right: 34px; width: 144px; height: 38px; background-color: #424242; color: #fff; font-weight: 700; font-size: 12px; border: none; padding: 9px 12px; box-sizing: border-box;border-radius: 3px;}
+
+
+
 
 
 /* body sub */
@@ -126,9 +143,11 @@ body.sub #main div.tab-contents #tabcontent2 > button {margin-top: 52px;}
 /* body admin */
 body.admin {}
 body.admin > div#wrapper {}
-body.admin > div#wrapper > #main {padding-left: 302px; box-sizing: border-box; padding-top: 70px;}
+body.admin > div#wrapper > #main,
+body.table > div#wrapper > #main {padding-left: 302px; box-sizing: border-box; padding-top: 70px;}
 body.admin > div#wrapper > #main > h2 {padding-top: 28px;}
-body.admin > div#wrapper > #main > .sec {width: 1180px;   box-sizing: border-box; }
+body.admin > div#wrapper > #main > .sec,
+body.table > div#wrapper > #main > .sec  {width: 1180px;   box-sizing: border-box;}
 body.admin > div#wrapper > #main > .sec > div.content-box {display: block; box-sizing: border-box;}
 #section1 div.checkBox-wrap ul.list:not(:last-child) ul > li {font-size: 13px;}
 
@@ -207,7 +226,7 @@ select.select_box {width: 98px; height: 38px; border-radius: 8px; box-sizing: bo
 #section2 div.search-area > div> label,
 #section2 div.search-area > div > a.download_btn,
 #section2 div.select-area >  a.find_btn
- {display: block;background: #FFFFFF; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08); border-radius: 8px; font-size: 16px; height: 38px; box-sizing: border-box; line-height: 19px; font-weight: 500; color: #757575; position: relative;}
+ {display: block;background: #FFFFFF; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08); border-radius: 8px; font-size: 16px; height: 40px; box-sizing: border-box; line-height: 20px; font-weight: 500; color: #757575; position: relative;}
  #section2 div.search-area > div> label,
 #section2 div.search-area > div > a.download_btn { padding: 8.5px 8px 8.5px 36px;}
 #section2 div.select-area >  a.find_btn {padding: 8px 10px; margin-right: 16px;}
@@ -216,30 +235,51 @@ select.select_box {width: 98px; height: 38px; border-radius: 8px; box-sizing: bo
  #section2 div.search-area > div > a.download_btn {margin-left: 24px;}
 
 
-#section2 div.box { box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);  border-top-right-radius: 16px;border-bottom-right-radius: 26px; border-bottom-left-radius: 26px; border-top-left-radius: 16px;}
-#section2  table {margin-top: 10px; background-color: #fff; width: 100%; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-radius: 16px 16px 0 0; }
-#section2  table > thead {text-align: center; height: 44px; background: #886AA3; color: #fff; } 
-#section2 table > thead >  tr > td:first-child { border-radius: 16px 0 0 0;}
-#section2 table > thead >  tr > td:last-child { border-radius: 0 16px 0 0;}
-#section2  table > tbody {}
-#section2  table > tbody  > tr {height: 38px; text-align: center; border-bottom: 1px solid #D9D9D9; box-sizing: border-box; }
-#section2  table > tbody  > tr > td {font-size: 14px; font-weight: 500;}
 
-#section2 div.pagelist-box {padding-top: 19px; padding-bottom: 15px; display: flex; justify-content: center; border-radius: 0 0 26px 26px; height: 57px;
-    box-sizing: border-box;
-    background-color: #fff;
- }
-#section2 div.pagelist-box > div { display: flex; position: relative;  justify-content: center; position: relative; width: 40%;}
-#section2 div.pagelist-box  ul.page-list { display: flex;}
-#section2 div.pagelist-box  ul.page-list > li {font-size: 16px; font-weight: 500; color: #757575;}
-#section2 div.pagelist-box ul.page-list > li.on {color: #292929; text-decoration: underline;} 
-#section2 div.pagelist-box ul.page-list > li + li {margin-left: 24px;}
+ /* table 수정 */
+div.box {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);  border-top-right-radius: 16px;
+    border-bottom-right-radius: 26px; border-bottom-left-radius: 26px; 
+    border-top-left-radius: 16px; 
+    width: 100%; margin-top: 10px; }
+table {background-color: #fff; width: 100%; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-radius: 16px 16px 0 0;border-collapse: collapse; }
+table > thead {text-align: center; height: 44px; background: #886AA3; color: #fff; } 
+table > thead >  tr:first-child > td:first-child { border-radius: 16px 0 0 0;}
+table > thead >  tr:first-child > td:last-child { border-radius: 0 16px 0 0;}
+table > tbody {}
+table > tbody  > tr {height: 38px; text-align: center; border-bottom: 1px solid #D9D9D9; box-sizing: border-box; }
+table > tbody  > tr > td {font-size: 14px; font-weight: 500;}
 
 
-/* button 수정 */
-#section2 div.pagelist-box div.btn-wrap {position: absolute; left: -30px; top: 50%; transform: translateY(-50%); display: flex; }
-#section2 div.pagelist-box div.btn-wrap.next {left: auto; right: -30px;}
-#section2 div.pagelist-box div.btn-wrap > button + button {margin-left: 16px;}
+/* 줄 그어주기 */
+#section3 table > thead > tr > td {border: 1px solid #fff;}
+#section3 table > thead > tr:nth-child(1) > td:first-child {border-left: none; border-bottom:none; box-sizing: border-box; height: 150px;}
+#section3 table > thead > tr:nth-child(1) > td:last-child {border-left: none;}
+#section3 table > thead > tr:nth-child(1) > td:nth-child(2),
+#section3 table > thead > tr:nth-child(1) > td:last-child,
+#section3 table > thead > tr:nth-child(2) > td:last-child {border-right: none;}
+#section3 table > thead > tr:nth-child(1) > td {border-top: none;}
+#section3 table > thead > tr:nth-child(2) > td {border-bottom: none;} 
+
+/* 표 크기 맞추기 */
+#section3 table > thead > tr:nth-child(1) {height: 48px;}
+#section3 table > thead > tr:nth-child(3) > td {height: 68px;}
+#section3 table > tbody > tr:hover {background-color: #F5F5F5;}
+
+div.pagelist-box {padding-top: 19px; padding-bottom: 15px; display: flex; justify-content: center; border-radius: 0 0 26px 26px; box-sizing: border-box;background-color: #fff;}
+#section2 div.pagelist-box {height: 57px;}
+#section3 div.pagelist-box {height: 80px;}
+
+
+div.pagelist-box > div { display: flex; position: relative;  justify-content: center; align-items: center; position: relative; width: 40%;}
+div.pagelist-box  ul.page-list {display: flex;}
+div.pagelist-box  ul.page-list > li {font-size: 16px; font-weight: 500; color: #757575;}
+div.pagelist-box ul.page-list > li.on {color: #292929; text-decoration: underline;} 
+div.pagelist-box ul.page-list > li + li {margin-left: 24px;}
+
+div.pagelist-box div.btn-wrap {position: absolute; left: -30px; top: 50%; transform: translateY(-50%); display: flex; }
+div.pagelist-box div.btn-wrap.next {left: auto; right: -30px;}
+div.pagelist-box div.btn-wrap > button + button {margin-left: 16px;}
 
 div.btn-wrap > button{width:30px;height:30px;font-size:10px; position:relative; background-color: transparent; border: none;}
 div.btn-wrap > .next_btn::after,
@@ -256,3 +296,17 @@ div.btn-wrap > .pfNext_btn:before,
 div.btn-wrap > .pfPrev_btn:before{content:"";width:2px;height:11px;background:#56606B;position:absolute;top:52% ;transform:translateY(-50%);}
 div.btn-wrap > .pfNext_btn:before {left: 22px;}
 div.btn-wrap > .pfPrev_btn:before {left: 6px;}
+
+@media print{
+    body{
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto; /* margin: auto auto; 로 자동 여백 설정도 가능 */
+   } 
+   #wrapper{min-width:auto;margin:0;}
+  #section3 {display: none;}
+  body.admin > div#wrapper > #main, body.table > div#wrapper > #main{padding-left:0;}
+  #print-layer-popup{width:600px;position:static;top:0;left:0;transform:none;margin:0 auto;}
+  #print-layer-popup a.close-btn {display: none;}
+  #print-layer-popup input.print_btn {display: none;}
+}
