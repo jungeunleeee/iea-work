@@ -57,7 +57,7 @@
                               <td>0</td>
                               <td>0</td>
                               <td>0</td>
-                              <td>0</td>
+                              <td><button type="button" class="print" id="print-button">출력</button></td>
                             </tr>
                             <tr>
                                 <td>1월</td>
@@ -72,7 +72,7 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
+                                <td><button type="button" class="print" id="print-button">출력</button></td>
                               </tr>
                               <tr>
                                 <td>1월</td>
@@ -87,7 +87,7 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
+                                <td><button type="button" class="print" id="print-button">출력</button></td>
                               </tr>
                               <tr>
                                 <td>1월</td>
@@ -102,7 +102,7 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
+                                <td><button type="button" class="print" id="print-button">출력</button></td>
                               </tr>
                               <tr>
                                 <td>1월</td>
@@ -117,7 +117,7 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
+                                <td><button type="button" class="print" id="print-button">출력</button></td>
                               </tr>
                               <tr>
                                 <td>1월</td>
@@ -132,7 +132,7 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
+                                <td><button type="button" class="print" id="print-button">출력</button></td>
                               </tr>
                               <tr>
                                 <td>1월</td>
@@ -147,7 +147,7 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
+                                <td><button type="button" class="print" id="print-button">출력</button></td>
                               </tr>
                               <tr>
                                 <td>1월</td>
@@ -162,7 +162,7 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
+                                <td><button type="button" class="print" id="print-button">출력</button></td>
                               </tr>
                               <tr>
                                 <td>1월</td>
@@ -177,7 +177,7 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
+                                <td><button type="button" class="print" id="print-button">출력</button></td>
                               </tr>
                               <tr>
                                 <td>1월</td>
@@ -192,7 +192,7 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td><button type="button" class="print">출력</button></td>
+                                <td><button type="button" class="print" id="print-button">출력</button></td>
                               </tr>
                           </tbody>
                         </table>
@@ -246,7 +246,7 @@
                     <span class="stamp"></span>
                     <!-- <img src="https://via.placeholder.com/300x100" alt=""> -->
                   </div>
-                  <input type="button" name="btprint" value="인쇄" class="print_btn" />
+                  <button type="button" name="btprint" class="confirm">확인</button>
                 </div>
                 <a href="#"></a>
               </div>
@@ -261,9 +261,33 @@
              $('div.layer-popup').removeClass('on');
         });
 
-        $('input.print_btn').on('click', function() {
-          window.print();
-        })
+        $('button.confirm').on('click', function() {
+             // 창 닫기
+             $('div.layer-popup').removeClass('on');
+
+             // 글자 수정하기
+             var text = $('button.print').text('완료');
+        });
+
+        // 자바스크립트
+        // var a = document.getElementById('print-button');
+        // var confirm = document.querySelector('button.confirm');
+        // var close = document.querySelector('a.close-btn');
+        // var popup = document.querySelector('#print-layer-popup');
+
+
+        // a.addEventListener('click', function() {
+        //   popup.classList.add("on");
+        // });
+
+        // confirm.addEventListener('click', function() {
+        //   popup.classList.remove("on");
+        //   a.innerText = "완료";
+        // });
+
+        // close.addEventListener('click', function() {
+        //   popup.classList.remove("on");
+        // })
 
     </script>
 </body>

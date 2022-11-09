@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="../css/style-pc.css" />
     <link rel="stylesheet" href="../css/web-font.css" />
 </head>
-<body>
+<body class="dash">
     <div id="wrapper">
         <a href="#main" id="skip-nav">본문 바로가기</a>
 
         <main id="main">
             <h2>Dash Board</h2>
-            <section id="section1" class="sec">
+            <section id="section4" class="sec">
                 <div class="content-box">
                   <div class="flexBox-wrap">
                     <div class="box">
@@ -42,7 +42,7 @@
                             </li>
                             <li>
                                 <span class="title">취소</span>
-                                <span class="number">5</span>
+                                <span class="number cancel">5</span>
                             </li>
                         </ul>
                     </div>
@@ -71,7 +71,7 @@
                             </li>
                             <li>
                                 <span class="title">취소</span>
-                                <span class="number">5</span>
+                                <span class="number cancel">5</span>
                             </li>
                         </ul>
                     </div>
@@ -79,7 +79,7 @@
                   <div class="flexBox-wrap">
                     <div class="box">
                         <p class="title">배정 취소 요청</p>
-                        <table>
+                        <table class="dashBoard">
                             <thead>
                                 <tr>
                                     <td>시행기관</td>
@@ -93,13 +93,13 @@
                                 <tr>
                                     <td>서울</td>
                                     <td>
-                                        <span>취소요청</span>
+                                        <span class="require-cancel">[취소요청]</span>
                                         김하나
-                                        <span class="phone-num">010-0000-0000</span>
+                                        <a href="tel:01000000000" class="phone-num">010-0000-0000</a>
                                     </td>
                                     <td>
                                         박일
-                                        <span class="phone-num">010-0000-0000</span>
+                                        <a href="tel:01000000000" class="phone-num">010-0000-0000</a>
                                     </td>
                                     <td>박하나</td>
                                     <td>2022.05.01</td>
@@ -107,13 +107,13 @@
                                 <tr>
                                     <td>서울</td>
                                     <td>
-                                        <span>취소요청</span>
+                                        <span class="require-cancel">[취소요청]</span>
                                         김하나
-                                        <span class="phone-num">010-0000-0000</span>
+                                        <a href="tel:01000000000" class="phone-num">010-0000-0000</a>
                                     </td>
                                     <td>
                                         박일
-                                        <span class="phone-num">010-0000-0000</span>
+                                        <a href="tel:01000000000" class="phone--num">010-0000-0000</a>
                                     </td>
                                     <td>박하나</td>
                                     <td>2022.05.01</td>
@@ -124,45 +124,45 @@
                   </div>
                   <div class="flexBox-wrap">
                     <div class="box">
-                        <h2>신규 공지사항</h2>
-                        <table>
+                        <p class="title">신규 공지사항</p>
+                        <table class="notice">
                             <tbody>
                                 <tr>
-                                    <td>중앙</td>
-                                    <td>돌봄 서비스 돌보미 필독</td>
-                                    <td>
+                                    <td class="place">중앙</td>
+                                    <td class="title">돌봄 서비스 돌보미 필독</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">14:08:00</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>중앙</td>
-                                    <td>돌봄 서비스 돌보미 필독</td>
-                                    <td>
+                                    <td class="place">중앙</td>
+                                    <td class="title">돌봄 서비스 돌보미 필독</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">14:07:00</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>경기</td>
-                                    <td>돌보미 급여관련</td>
-                                    <td>
+                                    <td class="place">경기</td>
+                                    <td class="title">돌보미 급여관련</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">13:15:00</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>용산</td>
-                                    <td>오프라인 보수교육 실시 공고</td>
-                                    <td>
+                                    <td class="place">용산</td>
+                                    <td class="title">오프라인 보수교육 실시 공고</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">10:00:07</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>대전</td>
-                                    <td>휴식 권장 공고</td>
-                                    <td>
+                                    <td class="place">대전</td>
+                                    <td class="title">휴식 권장 공고</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">08:54:12</span>
                                     </td>
@@ -171,55 +171,55 @@
                         </table>
                     </div>
                     <div class="box">
-                        <h2>신규 1:1 문의</h2>
-                        <table>
+                        <p class="title">신규 1:1 문의</p>
+                        <table class="notice">
                             <tbody>
                                 <tr>
-                                    <td>중앙</td>
-                                    <td>돌봄 서비스 이용자 필독</td>
-                                    <td>김하나</td>
-                                    <td>이용자</td>
-                                    <td>
+                                    <td class="place">중앙</td>
+                                    <td class="title">돌봄 서비스 이용자 필독</td>
+                                    <td class="name">김하나</td>
+                                    <td class="user">이용자</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">14:08:00</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>중앙</td>
-                                    <td>돌봄 서비스 돌보미 필독</td>
-                                    <td>김듈</td>
-                                    <td>이용자</td>
-                                    <td>
+                                    <td class="place">중앙</td>
+                                    <td class="title">돌봄 서비스 돌보미 필독</td>
+                                    <td class="name">김듈</td>
+                                    <td class="user">이용자</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">14:08:00</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>경기</td>
-                                    <td>돌보미 급여관련</td>
-                                    <td>김셋</td>
-                                    <td>이용자</td>
-                                    <td>
+                                    <td class="place">경기</td>
+                                    <td class="title">돌보미 급여관련</td>
+                                    <td class="name">김셋</td>
+                                    <td class="user">이용자</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">14:08:00</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>울산</td>
-                                    <td>오프라인 보수교육 실시 공고</td>
-                                    <td>박하나</td>
-                                    <td>돌보미</td>
-                                    <td>
+                                    <td class="place">울산</td>
+                                    <td class="title">오프라인 보수교육 실시 공고</td>
+                                    <td class="name">박하나</td>
+                                    <td class="user">돌보미</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">14:08:00</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>대전</td>
-                                    <td>휴식 권장 공고</td>
-                                    <td>박듈</td>
-                                    <td>돌보미</td>
-                                    <td>
+                                    <td class="place">대전</td>
+                                    <td class="title">휴식 권장 공고</td>
+                                    <td class="name">박듈</td>
+                                    <td class="user">돌보미</td>
+                                    <td class="dates">
                                         <span class="date">22.08.07</span>
                                         <span class="time">14:08:00</span>
                                     </td>
