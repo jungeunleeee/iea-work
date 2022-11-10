@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동 슬라이드</title>
+    <link rel="stylesheet" href="../css/style-pc.css" />
+    <link rel="stylesheet" href="../css/web-font.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="banner-slide-box">
+        <div class="banner-box">
+            <ul class="banner-slide">
+                <li>
+                    <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
+                </li>
+                <li>
+                    <img src="../img/꽃.jpg" alt="꽃" />
+                </li>
+                <li>
+                    <img src="../img/우리뚜뚜.jpg" alt="우리뚜뚜" />
+                </li>
+                <li>
+                    <img src="../img/우리초코.jpg" alt="우리초코">
+                </li>
+                <li>
+                    <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
+                </li>
+                <li>
+                    <img src="../img/꽃.jpg" alt="꽃" />
+                </li>
+                <li>
+                    <img src="../img/우리뚜뚜.jpg" alt="우리뚜뚜" />
+                </li>
+                <li>
+                    <img src="../img/우리초코.jpg" alt="우리초코">
+                </li>
+                <li>
+                    <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
+                </li>
+                <li>
+                    <img src="../img/꽃.jpg" alt="꽃" />
+                </li>
+                <li>
+                    <img src="../img/우리뚜뚜.jpg" alt="우리뚜뚜" />
+                </li>
+                <li>
+                    <img src="../img/우리초코.jpg" alt="우리초코">
+                </li>
+            </ul>
+        </div>
+        <div class="control-box">
+            <button type="button" class="prev_btn">이전</button>
+            <button type="button" class="next_btn">다음</button>
+        </div>
+    </div>
+    <script>
+        var numBanner = $('ul.banner-slide > li').length;
+        var bannerNow = 0;
+        var bannerNext = 0;
+        var bannerPrev = 0;
+        var widthBox = $('div.box').innerWidth();
+        var widthBar = 0;
+        
+        // ul길이 정정하기
+        // li 각 요소의 길이의 합을 구해야 함.
+
+        $('ul.banner-slide > li').each(function() {
+            widthBar += $(this).outerWidth(true);
+        });
+        $('ul.banner-slide').css({'width': widthBar + 'px'});
+
+        // 이전 버튼 클릭했을 때
+        $('button.prev_btn').on('click', function() {
+            alert('prev');
+        });
+
+        // 다음 버튼 클릭했을 때
+        $('button.next_btn').on('click', function() {
+
+            // $('ul.banner-slide > li').each(function() {
+            //     offsetLeft = $(this).position().left;
+            // });
+            offsetLeft = $('ul.banner-slide > li').position().left;
+
+            widthBar = widthBox - offsetLeft;
+
+            $('ul.banner-slide').css({'left': - offsetLeft + 'px', 'transition' : "left 0.5s"});
+
+            // li요소의 크기 + margin(outerwidth)만큼 움직여야 함.
+        });
+
+        // 해당하는 배너 슬라이드 보여줘
+        function showBanner(n) {
+            // ul의 길이
+            $('ul.banner-slide > li').each(function() {
+              widthBar += $(this).outerWidth(true);
+            });
+            $('ul.banner-slide').css({'width': widthBar + 'px'});
+
+            // 움직여야 하는 거리
+            offsetLeft = $('ul.banner-slide > li:eq('+ (n-1) +')').position().left;
+            $('ul.banner-slide').css({'left' : -offsetLeft + 'px'});
+        }
+
+
+    </script>
+</body>
+</html>

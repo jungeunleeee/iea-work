@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지 > 사업 실적 > 지역 현황</title>
+    <link rel="stylesheet" href="../css/style-pc.css" />
+    <link rel="stylesheet" href="../css/web-font.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="table">
+    <div id="wrapper">
+        <a href="#main" id="skip-nav">본문 바로가기</a>
+        
+        <main id="main">
+            <h2 class="ir-hidden">관리자 페이지 > 사업 실적 > 지역 현황</h2>
+            <section id="section3" class="sec">
+                <div class="content-box">
+                    <div class="box">
+                        <table>
+                          <thead class="table-title">
+                            <tr>
+                              <td rowspan="3">월별</td>
+                              <td colspan="6">돌봄서비스 선정 아동수</td>
+                              <td colspan="6">돌봄서비스 대기 아동수</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">전월 ⓐ</td>
+                                <td rowspan="2">신규 ⓑ</td>
+                                <td rowspan="2">긴급 돌봄 ⓒ<br />(신규)</td>
+                                <td rowspan="2">포기 탈락 ⓓ<br />(1시간 이상)</td>
+                                <td rowspan="2">포기 탈락<br />(1시간 이상)</td>
+                                <td rowspan="2">실선정<br />ⓐ+ ⓑ+ ⓒ+ ⓓ</td>
+                                <td rowspan="2">전월 ⓔ</td>
+                                <td rowspan="2">신규 ⓕ</td>
+                                <td colspan="3">조정 아동수</td>
+                                <td rowspan="2">실대기<br/>ⓔ+ ⓕ+ ⓖ</td>
+                            </tr>
+                            <tr>
+                                <td>선정</td>
+                                <td>포기.탈락</td>
+                                <td>탈락</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                           
+                          </tbody>
+                        </table>
+                        <div class="pagelist-box">
+                          <div>
+                            <ul class="page-list">
+                              <li class="on">1</li>
+                              <li>2</li>
+                              <li>3</li>
+                              <li>4</li>
+                              <li>5</li>
+                              <li>6</li>
+                              <li>7</li>
+                              <li>8</li>
+                              <li>9</li>
+                              <li>10</li>
+                            </ul>
+                            <div class="btn-wrap prev">
+                              <button type="button" class="pfPrev_btn"></button>
+                              <button type="button" class="prev_btn"></button>
+                            </div>
+              
+                            <div class="btn-wrap next">
+                              <button type="button" class="next_btn"></button>
+                              <button type="button" class="pfNext_btn"></button>
+                            </div>
+                          
+                          </div>
+                          <button type="button" class="add_btn" >추가하기</button>
+                        </div>
+                      </div>
+                </div>
+            </section>
+
+            <div id="print-layer-popup" class="layer-popup prints">
+                <a href="#"></a>
+                <div class="layer-box">
+                  <a href="#" class="close-btn">닫기</a>
+                  <p class="title-mini">장애아돌보미 교육이수 수료증</p>
+                  <h2>수료증</h2>
+                  <ul class="list">
+                      <li>성명 : <span>김하나</span></li>
+                      <li>주민등록번호 : <span>790408-2******</span></li>
+                      <li>교육과정 명 : <span>양성교육 40시간</span></li>
+                      <li>교육기관 : <span>교육기관 1</span></li>
+                  </ul>
+                  <p class="desc">
+                    위 사항은 (교육기관1)에서 실시간 장애아돌보니 (양성교육 40시간)을<br /> 수료하였으므로 이 증서를 수여합니다.
+                  </p>
+                  <span class="date">2022년 08월 04일</span>
+                  <div class="organization">
+                    <span class="name">서울시행기관장 </span>
+                    <span class="stamp"></span>
+                    <!-- <img src="https://via.placeholder.com/300x100" alt=""> -->
+                  </div>
+                  <button type="button" name="btprint" class="confirm">확인</button>
+                </div>
+                <a href="#"></a>
+              </div>
+        </main>
+    </div>
+    <script>
+      
+
+
+      chechNum();
+
+      $('.add_btn').on('click', function(){
+        // 리스트 추가하기
+        $('table > tbody').append(
+          `<tr>
+            <td class="num"><span class="n"></span>번</td>
+            <td class="word1"></td>
+            <td class="word2"></td>
+            <td class="word3"></td>
+            <td class="word4"></td>
+            <td class="word5"></td>
+            <td class="word6"></td>
+            <td class="word7"></td>
+            <td class="word8"></td>
+            <td class="word9"></td>
+            <td class="word10"></td>
+            <td class="word11"></td>
+            <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
+          </tr>`);
+          chechNum();
+          inputData();
+
+      });
+
+      $(document).on("click", ".delete", function(){
+        $(this).parents('tr').remove();
+        chechNum();
+      });
+
+      function chechNum() {
+        var trLen = $('table > tbody > tr').length;
+        $('table > tbody > tr').each(function(i) {
+          for(var i=0; i < trLen ; i++) {
+            $('table > tbody > tr:eq('+ i +') span.n').text(i + 1);
+          }
+        });
+      }
+
+      // prompt창으로 답 받기
+      function inputData() {
+        var que1 = prompt("word1 을 입력하세요");
+        var que2 = prompt("word2 을 입력하세요");
+        var que3 = prompt("word3 을 입력하세요");
+        var que4 = prompt("word4 을 입력하세요");
+        var que5 = prompt("word5 을 입력하세요");
+        var que6 = prompt("word6 을 입력하세요");
+        var que7 = prompt("word7 을 입력하세요");
+        var que8 = prompt("word8 을 입력하세요");
+        var que9 = prompt("word9 을 입력하세요");
+        var que10 = prompt("word10 을 입력하세요");
+        var que11 = prompt("word11 을 입력하세요");
+
+        for(var i=0; i < 11; i++) {
+          switch(1) {
+            case que1 != "" :
+                 $('td.word1').text(que1); 
+            case que2 != "" :
+            $('td.word2').text(que1); 
+            case que3 != "" :
+            $('td.word3').text(que1); 
+            case que4 != "" :
+            $('td.word4').text(que1); 
+            case que5 != "" :
+            $('td.word5').text(que1); 
+            case que6 != "" :
+            $('td.word6').text(que1); 
+            case que7 != "" :
+            $('td.word7').text(que1); 
+            case que8 != "" :
+            $('td.word8').text(que1); 
+            case que9 != "" :
+            $('td.word9').text(que1); 
+            case que10 != "" :
+            $('td.word10').text(que1); 
+            case que11 != "" :
+            $('td.word1').text(que1);      
+          }
+        }
+    
+      }
+
+
+      
+    </script>
+</body>
+</html>

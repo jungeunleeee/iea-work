@@ -357,3 +357,11 @@ table.notice > tbody > tr > td.title {color: #242122; font-weight: 400; font-siz
 table.notice > tbody > tr > td.user,
 table.notice > tbody > tr > td.name {font-size: 13px;font-weight: 400;color: #292929}
 table.notice > tbody > tr > td.dates{font-size: 12px; line-height: 17px;  color: #999}
+
+
+/* 슬라이드 */
+.banner-slide-box {background-color: red; margin-top: 200px;}
+.banner-slide-box > .banner-box {background-color: orange; width: 1200px; box-sizing: border-box; margin: 0 auto; overflow: hidden;}
+.banner-slide-box > .banner-box > ul.banner-slide {overflow: hidden; position: relative;}
+.banner-slide-box > .banner-box > ul.banner-slide > li {width: 300px; height: 150px; float: left; margin-right: 20px; }
+.banner-slide-box > .banner-box > ul.banner-slide > li > img {width: 100%; height: 100%;}
