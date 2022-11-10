@@ -45,7 +45,7 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>1월</td>
+                              <td class="num">1월</td>
                               <td>0</td>
                               <td>3,685</td>
                               <td>0</td>
@@ -57,10 +57,10 @@
                               <td>0</td>
                               <td>0</td>
                               <td>0</td>
-                              <td><button type="button" class="print" id="print-button">출력</button></td>
+                              <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                             </tr>
                             <tr>
-                                <td>1월</td>
+                                <td class="num">2월</td>
                                 <td>0</td>
                                 <td>3,685</td>
                                 <td>0</td>
@@ -72,10 +72,10 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td><button type="button" class="print" id="print-button">출력</button></td>
+                                <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                               </tr>
                               <tr>
-                                <td>1월</td>
+                                <td class="num">3월</td>
                                 <td>0</td>
                                 <td>3,685</td>
                                 <td>0</td>
@@ -87,10 +87,10 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td><button type="button" class="print" id="print-button">출력</button></td>
+                                <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                               </tr>
                               <tr>
-                                <td>1월</td>
+                                <td class="num">4월</td>
                                 <td>0</td>
                                 <td>3,685</td>
                                 <td>0</td>
@@ -102,10 +102,10 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td><button type="button" class="print" id="print-button">출력</button></td>
+                                <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                               </tr>
                               <tr>
-                                <td>1월</td>
+                                <td class="num">5월</td>
                                 <td>0</td>
                                 <td>3,685</td>
                                 <td>0</td>
@@ -117,10 +117,10 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td><button type="button" class="print" id="print-button">출력</button></td>
+                                <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                               </tr>
                               <tr>
-                                <td>1월</td>
+                                <td class="num">6월</td>
                                 <td>0</td>
                                 <td>3,685</td>
                                 <td>0</td>
@@ -132,10 +132,10 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td><button type="button" class="print" id="print-button">출력</button></td>
+                                <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                               </tr>
                               <tr>
-                                <td>1월</td>
+                                <td class="num">7월</td>
                                 <td>0</td>
                                 <td>3,685</td>
                                 <td>0</td>
@@ -147,10 +147,10 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td><button type="button" class="print" id="print-button">출력</button></td>
+                                <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                               </tr>
                               <tr>
-                                <td>1월</td>
+                                <td class="num">8월</td>
                                 <td>0</td>
                                 <td>3,685</td>
                                 <td>0</td>
@@ -162,10 +162,10 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td><button type="button" class="print" id="print-button">출력</button></td>
+                                <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                               </tr>
                               <tr>
-                                <td>1월</td>
+                                <td class="num">9월</td>
                                 <td>0</td>
                                 <td>3,685</td>
                                 <td>0</td>
@@ -177,10 +177,10 @@
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td><button type="button" class="print" id="print-button">출력</button></td>
+                                <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                               </tr>
                               <tr>
-                                <td>1월</td>
+                                <td class="num">10월</td>
                                 <td>0</td>
                                 <td>3,685</td>
                                 <td>0</td>
@@ -188,11 +188,11 @@
                                 <td>47</td>
                                 <td>3,683</td>
                                 <td>0</td>
+                                <td>0</td> 
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
-                                <td><button type="button" class="print" id="print-button">출력</button></td>
+                                <td><button type="button" class="delete" id="delete_btn">삭제</button></td>
                               </tr>
                           </tbody>
                         </table>
@@ -219,7 +219,9 @@
                               <button type="button" class="next_btn"></button>
                               <button type="button" class="pfNext_btn"></button>
                             </div>
+                          
                           </div>
+                          <button type="button" class="add_btn" >추가하기</button>
                         </div>
                       </div>
                 </div>
@@ -253,56 +255,6 @@
         </main>
     </div>
     <script>
-      // jQuery: tr 인덱스 값 구하기
-
-      $('table > tbody > tr > td > #print-button').on('click', function() {
-        $('div.layer-popup').addClass('on');
-        var index = $(this).parents("tr").index(); 
-
-        $('button.confirm').on('click', function() {
-           $('div.layer-popup').removeClass('on');
-           $('table > tbody > tr:eq('+index+') #print-button').text('완료');
-        });
-      });
-
-      // javaScript
-      // var trElements = document.querySelectorAll('table > tbody > tr'); //tr의 모음
-      // var trLists = [...document.querySelectorAll("table > tbody > tr")] //tr을 배열로 만듦.
-      // console.log(trLists);
-      // var trElem = document.querySelector('table > tbody > tr');
-      // var a = document.getElementById('print-button');
-      // var confirm = document.querySelector('button.confirm');
-      // var close = document.querySelector('a.close-btn');
-      // var popup = document.querySelector('#print-layer-popup');
-
-      // a.addEventListener('click', function() {
-      //   popup.classList.add("on");
-      // });
-
-      // confirm.addEventListener('click', function() {
-      //   popup.classList.remove("on");
-      //   // trLists[현재 인덱스]
-      //   // 몇번째 버튼이 클릭되었는지 알아야 함 => tr의 순번
-      //   trElements.forEach(function(el, i) {
-      //     console.log(el);
-      //     // 해당되는 el만...
-
-      //   })
-      // }); 
-
-
-      // close.addEventListener('click', function() {
-      //   popup.classList.remove("on");
-      // })
-
-
-
-
-
-
-      
-
-
       
     </script>
 </body>

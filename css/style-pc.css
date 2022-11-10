@@ -270,6 +270,7 @@ table > tbody  > tr > td {font-size: 14px; font-weight: 500;}
 div.pagelist-box {padding-top: 19px; padding-bottom: 15px; display: flex; justify-content: center; border-radius: 0 0 26px 26px; box-sizing: border-box;background-color: #fff;}
 #section2 div.pagelist-box {height: 57px;}
 #section3 div.pagelist-box {height: 80px;}
+div.pagelist-box > .add_btn {margin-left: 50px; }
 
 
 div.pagelist-box > div { display: flex; position: relative;  justify-content: center; align-items: center; position: relative; width: 40%;}
