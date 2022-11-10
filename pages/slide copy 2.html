@@ -25,9 +25,6 @@
                 <li>
                     <img src="../img/우리초코.jpg" alt="우리초코">
                 </li>
-                <li>
-                    <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
-                </li>
             </ul>
         </div>
         <div class="control-box">
@@ -48,10 +45,10 @@
         // 타이머 기능 만들기
         var timerId ='';
         var onTimer = true;
-        var timerSpeed =2000;
+        var timerSpeed =3000;
 
         setBanner();
-        showBanner(1);
+        showBanner(0);
 
         if(onTimer === true) {
             showBanner(bannerNext);
@@ -89,7 +86,6 @@
               widthBar += $(this).outerWidth(true);
             });
             $('ul.banner-slide').css({'width': widthBar + 'px'});
-
         }
 
         function startTimer() {
@@ -115,6 +111,7 @@
         // 해당하는 배너 슬라이드 보여줘~!
         function showBanner(n) {
             resetTimer();
+
             // 움직여야 하는 거리
             offsetLeft = -$('ul.banner-slide > li:eq('+ (n-1) +')').position().left;
             $('ul.banner-slide').css({'left' : offsetLeft + 'px', 'transition' : 'left 0.5s'});
@@ -122,15 +119,25 @@
 
             // 현재 내 번호 파악해
             bannerNow = n;
-            bannerPrev = (n===1) ? numBanner: (n-1);
-            bannerNext = (n===numBanner) ? 1 : (n+1);
+            bannerPrev = (n===1) ? 1: (n-1);
+            bannerNext = (n===numBanner) ? numBanner : (n+1);
 
-            $('ul.banner-slide').append()
+            console.log(bannerNow +'/' + bannerPrev + '/' + bannerNext)
+
+            $('ul.banner-slide').append(
+                `
+                <li>
+                    <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
+                </li>
+                
+                `
+            );
+
+            $('ul.banner-slide').remove('li:eq('+ (bannerNow - 1)+')')
 
 
 
-        
-
+ 
         }
 
 
