@@ -4,46 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자동 슬라이드-rererer</title>
+    <title>무한배너 슬라이드</title>
     <link rel="stylesheet" href="../css/style-pc.css" />
     <link rel="stylesheet" href="../css/web-font.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body>
-    <div class="banner-slide-box">
-        <div class="banner-box">
-            <ul class="banner-slide">
-                <li>
-                    <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
-                </li>
-                <li>
-                    <img src="../img/꽃.jpg" alt="꽃" />
-                </li>
-                <li>
-                    <img src="../img/우리뚜뚜.jpg" alt="우리뚜뚜" />
-                </li>
-                <li>
-                    <img src="../img/우리초코.jpg" alt="우리초코">
-                </li>
-                <li>
-                    <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
-                </li>
-                <li>
-                    <img src="../img/꽃.jpg" alt="꽃" />
-                </li>
-                <li>
-                    <img src="../img/우리뚜뚜.jpg" alt="우리뚜뚜" />
-                </li>
-                <li>
-                    <img src="../img/우리초코.jpg" alt="우리초코">
-                </li>
-            </ul>
-        </div>
-        <div class="control-box">
-            <button type="button" class="prev_btn">이전</button>
-            <button type="button" class="next_btn">다음</button>
+<body class="slide">
+    <div id="wrapper">
+        <h1>무한배너 슬라이드</h1>
+        <div class="banner-slide-box">
+            <div class="banner-box">
+                <ul class="banner-slide">
+                    <li>
+                        <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
+                    </li>
+                    <li>
+                        <img src="../img/꽃.jpg" alt="꽃" />
+                    </li>
+                    <li>
+                        <img src="../img/우리뚜뚜.jpg" alt="우리뚜뚜" />
+                    </li>
+                    <li>
+                        <img src="../img/우리초코.jpg" alt="우리초코">
+                    </li>
+                    <li>
+                        <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
+                    </li>
+                    <li>
+                        <img src="../img/꽃.jpg" alt="꽃" />
+                    </li>
+                    <li>
+                        <img src="../img/우리뚜뚜.jpg" alt="우리뚜뚜" />
+                    </li>
+                    <li>
+                        <img src="../img/우리초코.jpg" alt="우리초코">
+                    </li>
+                </ul>
+            </div>
+            <div class="control-box">
+                <button type="button" class="prev_btn">이전</button>
+                <button type="button" class="next_btn">다음</button>
+            </div>
         </div>
     </div>
+   
     <script>
         var numBanner = $('ul.banner-slide > li').length;
         var bannerNow = 0;
