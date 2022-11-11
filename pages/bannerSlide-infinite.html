@@ -80,9 +80,8 @@
 
         $('.prev_btn').on('click', function() {
             var move = $('ul.banner-slide > li').outerWidth(true);
-            $('ul.banner-slide').stop().animate({left: "+=" + move+'px'},300).delay(0).queue(function(){
-                $('ul.banner-slide > li:last-child').prependTo($('ul.banner-slide')).parent().animate({left:0},0).dequeue();
-            });
+            // ul left를 0으로 만들고 뒤에 있는게 앞으로 오고 동작
+            $('ul.banner-slide').css({left: -move+'px'}).find("> li:last-child").prependTo($('ul.banner-slide')).parent().animate({left:0},300)
             
         });
 
