@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동 슬라이드-rererer</title>
+    <link rel="stylesheet" href="../css/style-pc.css" />
+    <link rel="stylesheet" href="../css/web-font.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="banner-slide-box">
+        <div class="banner-box">
+            <ul class="banner-slide">
+                <li>
+                    <img src="../img/귀여운멍뭉이.jpg" alt="귀여운멍뭉이" />
+                </li>
+                <li>
+                    <img src="../img/꽃.jpg" alt="꽃" />
+                </li>
+                <li>
+                    <img src="../img/우리뚜뚜.jpg" alt="우리뚜뚜" />
+                </li>
+                <li>
+                    <img src="../img/우리초코.jpg" alt="우리초코">
+                </li>
+            </ul>
+        </div>
+        <div class="control-box">
+            <button type="button" class="prev_btn">이전</button>
+            <button type="button" class="next_btn">다음</button>
+        </div>
+    </div>
+    <script>
+        var numBanner = $('ul.banner-slide > li').length;
+        var bannerNow = 0;
+        var bannerNext = 0;
+        var bannerPrev = 0;
+        var offsetLeft = 0;
+        var offsetLeftMin = 0;
+        var widthBox = $('div.box').innerWidth(); //box의 길이
+        var widthBar = 0; //ul의 길이
+
+        var count = 0;
+        var count2 = 0
+
+        // 타이머 기능 만들기
+        var timerId ='';
+        var onTimer = true;
+        var timerSpeed =3000;
+        // console.log($('ul.banner-slide > li:eq(0)').html());
+        console.log($('ul.banner-slide > li:first-child').outerWidth(true));
+        console.log($('ul.banner-slide > li:first-child').position().left);
+
+        $('.next_btn').on('click', function() {
+
+            switch(count) {
+                case 0 :
+                // 실행문
+                $('ul.banner-slide > li:first-child').appendTo($('ul.banner-slide'), function() {
+                    $('ul.banner-slide > li').eahc
+                })
+                count++;
+                console.log(count + "/첫번째")
+                break;
+
+                case 1 :
+                // 실행문
+                $('ul.banner-slide > li:first-child').appendTo($('ul.banner-slide'));
+
+                count++;
+                console.log(count + "/두번째")
+                break;
+
+                case 2 :
+                // 실행문
+                $('ul.banner-slide > li:first-child').appendTo($('ul.banner-slide'));
+                count++;
+                console.log(count + "/세번째")
+                break;
+
+                case 3 :
+                // 실행문
+                $('ul.banner-slide > li:first-child').appendTo($('ul.banner-slide'));
+                count=0;
+                console.log(count + "/네번째")
+                break;
+            }
+        });
+
+        $('.prev_btn').on('click', function() {
+            switch(count) {
+                case 0 :
+                // 실행문
+                $('ul.banner-slide > li:last-child').prependTo($('ul.banner-slide'));
+                count++;
+                break;
+
+                case 1 :
+                // 실행문
+                $('ul.banner-slide > li:last-child').prependTo($('ul.banner-slide'));
+                count++;
+                break;
+
+                case 2 :
+                // 실행문
+                $('ul.banner-slide > li:last-child').prependTo($('ul.banner-slide'));
+                count++;
+                break;
+
+
+                case 3 :
+                // 실행문
+                $('ul.banner-slide > li:last-child').prependTo($('ul.banner-slide'));
+                count = 0;
+                break;
+            }
+        });
+
+
+
+
+    </script>
+</body>
+</html>

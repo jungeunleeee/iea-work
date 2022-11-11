@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <link rel="stylesheet" href="../css/style-pc.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="ani-box" id="art1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <script>
+function handleArt1Show(){
+    $('span:eq(0)').animate({'width':'100%'},700,function(){
+        $('span:eq(1)').animate({'height':'100%'},700,function(){
+            $('span:eq(2)').animate({'width':'100%'},700,function(){
+                $('span:eq(3)').animate({'height':'100%'},700)
+            })
+        })
+    })
+}
+handleArt1Show()
+
+    </script>
+    
+</body>
+</html>
